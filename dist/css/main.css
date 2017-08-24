@@ -585,6 +585,11 @@ table.normal tr td {
     background-color: #9f3a26;
     border-color: #9f3a26; }
 
+.mystyle .header .main-nav-wrap {
+  position: fixed;
+  left: 60px;
+  right: 0; }
+
 .mystyle .header .navbar-header {
   font-weight: 700;
   letter-spacing: 12px;
@@ -761,8 +766,17 @@ div.mouse {
     animation-timing-function: ease; }
 
 .section-features .item-feature .feature-image {
-  margin-bottom: 40px;
-  text-align: center; }
+  max-width: 70%;
+  margin: 15px auto 30px;
+  text-align: center;
+  min-height: 150px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .section-features .item-feature .feature-title {
   margin-bottom: 10px;
@@ -770,9 +784,43 @@ div.mouse {
   color: #B4412B;
   font-size: 20px; }
 
+.section-features .item-feature .feature-count {
+  text-align: center;
+  font-size: 50px;
+  color: #000;
+  padding: 15px 0 30px; }
+
+.section-return {
+  padding-top: 220px;
+  padding-bottom: 220px; }
+
+.feature-group {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex; }
+  .feature-group .item-feature-2 {
+    margin: 0 30px;
+    border: 5px solid #000;
+    width: 45%;
+    padding: 65px 75px 65px 55px; }
+    .feature-group .item-feature-2 .feature-count {
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: 700; }
+      .feature-group .item-feature-2 .feature-count span {
+        font-weight: 200; }
+    .feature-group .item-feature-2 .feature-title {
+      font-weight: 200;
+      margin-bottom: 25px; }
+
 .section > .inner {
   padding-top: 80px;
   padding-bottom: 0px; }
+
+.section .section-header {
+  margin-bottom: 30px; }
 
 .section.section-with-bg {
   background-position: center top; }
@@ -785,10 +833,11 @@ div.mouse {
   text-align: center; }
 
 .section .title-section {
-  font-weight: bold;
   font-family: Prata, arial, sans-serif;
-  margin-bottom: 10px;
-  text-align: center; }
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px; }
 
 .section .title-section-details {
   text-align: center;
@@ -868,6 +917,8 @@ div.mouse {
   top: 20%;
   width: 50%;
   z-index: 1; }
+  .home-5__title b {
+    display: block; }
 
 .home-5__texts {
   left: 50%;
@@ -921,5 +972,77 @@ div.mouse {
 
 .home-5__image {
   display: inline-block; }
+
+.home-2 {
+  padding-bottom: 120px;
+  margin-bottom: 250px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: 41.66667%;
+  margin-right: 16.66667%; }
+  .home-2 .ion-quote {
+    color: #596377;
+    font-size: 18px; }
+  .home-2 .home-2__texts {
+    margin-right: -20%;
+    position: relative;
+    width: 60%;
+    z-index: 1; }
+  .home-2 .home-2__images {
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    padding-left: 20%;
+    position: relative;
+    width: 60%; }
+    .home-2 .home-2__images .rect {
+      position: absolute;
+      right: 0;
+      top: 50px; }
+    .home-2 .home-2__images .lines {
+      bottom: -30px;
+      position: absolute;
+      right: -50px; }
+  .home-2 .home-2__image {
+    position: relative;
+    z-index: 1; }
+  .home-2 .home-2__text {
+    font-family: Prata, arial, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    margin-top: 10px; }
+
+.section-3 {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px; }
+  .section-3 .home-3__image {
+    text-align: right;
+    position: absolute;
+    right: -30px;
+    max-width: 46.3333%; }
+  .section-3 .home-3__text {
+    letter-spacing: 2px;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    border: 5px solid #000;
+    font-weight: 200;
+    max-width: 235px;
+    padding: 50px 40px;
+    text-align: center;
+    z-index: 1;
+    margin-left: 41.66667%;
+    position: relative; }
 
 /*# sourceMappingURL=main.css.map */
