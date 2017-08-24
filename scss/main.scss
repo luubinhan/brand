@@ -1,27 +1,34 @@
 @import 'variable';
 @import 'mixin';
-
-.title-section {
-  font-weight: bold;
-  text-align: center;
-  font-family: $san-serif;
-  margin-bottom: 10px;
-}
-.title-section-details {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 18px;
-}
+/* Common Element
+-------------------------------------------------------------- */
 .page-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
 }
+.mystyle{
+  .btn{
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    &.btn-light {
+      border: 1px solid #333;
+      border-radius: 9999em;
+      text-transform: uppercase;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }  
+}
+
+/* Common Element
+-------------------------------------------------------------- */
 
 /* List - Text - Link
 -------------------------------------------------------------- */
 html {
   font-size: 100.01%;
+  height: 100%;
   background: #fff;
 }
 body {
@@ -35,7 +42,8 @@ body {
   margin: $glutter;
   padding: $glutter;
   background: #DFDFE2;
-  height: 100%;
+  min-height: calc(100% - 60px);
+
 }
 a {
   color: $link-color;
@@ -43,6 +51,8 @@ a {
   outline: none;
 }
 a:hover {
+  outline: none;
+  text-decoration: none;
   color: $link-color-hover;  
   -webkit-transition: color .35s;
   -moz-transition: color .35s;
@@ -638,3 +648,193 @@ table.normal tr td {
 }
 
 /* RESET BOOTSTRAP -------------------------------------------- */
+
+/* Footer
+-------------------------------------------------------------- */
+.footer {
+  color: $muted;
+  font-size: 11px;  
+  padding-top: 60px;
+  .footer-inner {    
+    i {
+      font-size: 22px;
+    }
+  }
+  .copyright {
+    float: left;
+    width: 60%;
+  }
+  .credit {
+    float: left;
+    width: 20%;
+  }
+  .design-by {
+    overflow: hidden;
+    text-align: right;
+  }
+}
+@media(max-width:$breakpoint-xs){
+  .footer {
+    .copyright,
+    .credit{
+      float: none;
+      width: auto;
+      text-align: center;
+      font-size: $font-size-small;
+    }
+  }
+}
+/* Footer --------------------------------------------- */
+
+
+.home-hero{
+  margin-bottom: 30px;
+  .bg-height{    
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    position: relative;
+    min-height: calc(100vh - 300px);
+    position: relative;
+  }
+  .home-text{
+    width: 45%;
+    position: absolute;
+    left: 40px;
+    top: 70px;
+    bottom: 40px;
+    .hero-title {     
+      font-size: 60px;
+      line-height: 69px;
+      font-family: $san-serif;
+      font-weight: 700;
+      margin-bottom: $glutter;
+    }
+    .hero-desc {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@-webkit-keyframes scroll-inner {
+    from {margin-top: 15%;}
+    to {margin-top: 50%;}
+}
+@keyframes scroll-inner {
+    from {margin-top: 15%;}
+    to {margin-top: 50%;}
+}
+@-webkit-keyframes scroll-mouse {
+    from {margin-top: 0;}
+    to {margin-top: 15px;}
+}
+@keyframes scroll-mouse {
+    from {margin-top: 0;}
+    to {margin-top: 15px;}
+}
+.scroll-container {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+div.mouse-container{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+}
+div.mouse{
+  position:relative;
+  margin:0 auto;
+  display:block;
+  width: 40px;
+  height: 60px;
+  border: solid 1px rgba(0,0,0,.4);
+  border-radius: 25px;
+  -webkit-animation: scroll-mouse 1.5s; 
+  animation: scroll-mouse 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  //-webkit-animation-timing-function:ease;
+  //animation-timing-function:ease;
+  
+  span.scroll-down{
+    display:block;
+    width:10px;
+    height:10px;
+    background: rgba(0,0,0,.4);
+    border-radius:50%;
+    margin:15% auto auto auto;
+    
+    -webkit-animation: scroll-inner 1.5s; 
+    animation: scroll-inner 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function:ease;
+    animation-timing-function:ease
+      
+  }
+}
+
+.section-features{
+  .item-feature{
+    .feature-image {
+      margin-bottom: 40px;      
+      text-align: center;
+    }
+    .feature-title {
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: $primary-color;
+      font-size: $font-size-large;
+    }
+  }
+}
+
+.section {
+  > .inner {
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
+  &.section-with-bg {
+    background-position: center top;
+    > .inner {
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+  }
+  .feature-center-image {
+    margin-bottom: $glutter;
+    text-align: center;
+  }
+  .title-section {
+    font-weight: bold;   
+    font-family: $san-serif;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .title-section-details {    
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+}
+.white-bg {
+  background: #fff;
+  &.section {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    > .inner {
+      padding-bottom: 80px;
+    }
+  }
+}
+
+.section-image{
+  margin-left: -$glutter;
+  margin-right: -$glutter;
+}
