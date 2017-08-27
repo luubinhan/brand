@@ -35,18 +35,12 @@
             map = new google.maps.Map(document.getElementById('map'));
         }
     </script>
-
-    <script src="js/animations.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.viewport.mini.js"></script>
-    <script src="js/jquery.parallax-1.1.3.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.appear.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
 
     <script src="js/plugin.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhktXAG6guKrLzHSMjAqPO9ki-SKP556Y" async defer></script>
+
 </head>
 
 <body class="mystyle">
@@ -55,45 +49,57 @@
     <div id="header">
         <header class="header">
             <div class="header-inner">
-                <nav class="navbar main-nav-wrap navbar-static-top">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			    <span class="sr-only">Toggle navigation</span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			  </button>
-                        <a class="navbar-brand" href="index.html">
-			  	BRAND
-			  </a>
-                    </div>
-                    <div class="container">
+                <nav class="navbar main-nav-wrap">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						    <span class="sr-only">Toggle navigation</span>
+						    <span class="icon-bar"></span>
+						    <span class="icon-bar"></span>
+						    <span class="icon-bar"></span>
+						  </button>
+                                    <a class="navbar-brand" href="index.html">
+						  	BRAND
+						  </a>
+                                </div>
+                            </div>
+                            <!-- col -->
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav primary-menu">
-                                <li><a href="index.html">Nệm</a></li>
-                                <li><a href="index.html">Ưu điểm</a></li>
-                                <li><a href="index.html">Dùng thử</a></li>
-                                <li><a href="13-woo-products.html">Cảm nhận</a></li>
-                            </ul>
+                            <div class="col-sm-6">
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav primary-menu">
+                                        <li><a href="index.html">Nệm</a></li>
+                                        <li><a href="index.html">Ưu điểm nổi bật</a></li>
+                                        <li><a href="index.html">Chính sách dùng thử</a></li>
+                                        <li><a href="13-woo-products.html">Cảm nhận từ khách hàng</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+
+                            </div>
+
+                            <div class="col-sm-3">
+                                <ul class="nav tool-nav">
+                                    <li>
+                                        <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Liên hệ</a>
+                                    </li>
+                                    <li>
+                                        <a href="6-faq.html" role="button" aria-haspopup="true" aria-expanded="false">Hỏi đáp</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" role="button" aria-haspopup="true" aria-expanded="false">ĐẶT MUA</a>
+                                    </li>
+                                    <li class="cart-menu">
+                                        <a href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="ion-ios-cart-outline"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <!-- /.navbar-collapse -->
 
-                        <ul class="nav tool-nav">
-                            <li>
-                                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Liên hệ</a>
-                            </li>
-                            <li>
-                                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Hỏi đáp</a>
-                            </li>
-                            <li>
-                                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">ĐẶT MUA</a>
-                            </li>
-                            <li>
-                                <a href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="ion-ios-cart-outline"></i></a>
-                            </li>
-                        </ul>
+
+
                     </div>
                     <!-- /.container-fluid -->
                 </nav>
@@ -128,81 +134,6 @@
                                     <span class='scroll-down'></span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="home-2">
-                <div class="home-2__texts skrollable skrollable-after">
-                    <span class="ion-quote"></span>
-                    <div class="home-2__text">
-                        100% cao su thiên nhiên (không có pha trộn cao su tổng hợp, cao su nhân tạo), không xẹp lún (trũng) trong suốt thời gian sử dụng lâu dài
-                    </div>
-                </div>
-                <div class="home-2__images">
-                    <div class="rect">
-                        <img src="https://www.filemarodion.gr/wp-content/themes/vg-twig/assets/img/rectangular.svg" alt="">
-                    </div>
-                    <div class="lines">
-                        <img src="https://www.filemarodion.gr/wp-content/themes/vg-twig/assets/img/lines2.svg" alt="">
-                    </div>
-                    <div class="home-2__image">
-                        <img src="https://www.filemarodion.gr/wp-content/uploads/2017/05/100Organic.gif" alt="">
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="section section--5">
-                <div class="container-fluid">
-                    <div class="home-5 animate">
-                        <div class="home-5__rhombus">
-                            <div class="rhombus">
-                                <img src="https://www.filemarodion.gr/wp-content/themes/vg-twig/assets/img/rhombus.svg" alt="">
-                            </div>
-                            <div class="home-5__title">Bảo quản <b>hoàn hảo</b></div>
-                            <div class="home-5__texts">
-                                <div class="home-5__text--1">Để sản phẩm luôn được bảo quản ở điều kiện tốt nhất, tấm an toàn vệ sinh nệm kèm theo được may bằng vải chần gòn, 04 góc được may dây gút để cố định trải trên bề mặt nệm (dưới lớp drap (ga) phủ trang trí), kích thước tương
-                                    ứng với kích thước bề mặt nệm.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="home-5__box">
-                            <div class="handmade">
-                                <img src="https://www.filemarodion.gr/wp-content/themes/vg-twig/assets/img/handmade--el.svg" alt="">
-                            </div>
-                            <div class="home-5__text--2">Phương pháp hữu hiệu cách ly nệm khỏi các nguồn nhiễm bẩn có thể phát sinh trong quá trình du lịch hay công tác.</div>
-                            <div class="home-5__image">
-                                <img src="https://www.tuftandneedle.com/images/img_stay_cool-3c415b52.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section section-3">
-                <div class="inner">
-                    <div class="container-fluid">
-                        <div class="home-3">
-                            <div class="home-3__image">
-                                <img src="https://casper.imgix.net/product/mattress/cross_sell/foundation-layer-full.png?auto=format&w=1000" alt="">
-                            </div>
-                            <div class="home-3__text">
-                                Hoàn toàn loại bỏ mùi hôi cao su. Nệm có mùi chocolate hoặc không mùi
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section section--about-3">
-                <div class="container">
-                    <div class="about-3 animate" style="background-image: url('https://www.filemarodion.gr/wp-content/uploads/2017/05/Melekouni_rhombus2.jpg');">
-                        <div class="about-3__box">
-                            <div class="about-3__title">Áo niệm</div>
-                            <div class="about-3__text">Phần áo nệm (vỏ bọc đệm) bao ngoài phần mousse từ chất liệu thun Jersey và các chất liệu vải ngoại nhập khác, được thiết kế, may đo ôm sát từng đường nét thân nệm.</div>
-                            <div class="rect"> <img src="https://www.filemarodion.gr/wp-content/themes/vg-twig/assets/img/rectangular.svg" alt=""> </div>
                         </div>
                     </div>
                 </div>
