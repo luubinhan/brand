@@ -783,6 +783,9 @@ div.mouse {
     -webkit-animation-timing-function: ease;
     animation-timing-function: ease; }
 
+.section-white {
+  background: #fff; }
+
 .section-features .item-feature .feature-image {
   max-width: 70%;
   margin: 15px auto 30px;
@@ -1065,16 +1068,20 @@ div.mouse {
     position: relative; }
 
 .page-hero {
-  background: #DFDFE2;
-  padding: 30px 0;
+  padding: 150px 0 30px;
   background-position: center top;
-  background-size: cover; }
-  .page-hero h3.hero-title {
-    margin-top: 0; }
+  background-size: cover;
+  text-align: center; }
+  .page-hero .hero-title {
+    margin-top: 0;
+    font-size: 2.3125em;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-family: "Quicksand", "Times New Roman", Times, serif; }
 
 .nav-tabs {
-  margin: 0 0 40px;
-  border-bottom: 2px solid #e1e3ea;
+  margin: 0 0 120px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between; }
   .nav-tabs > li {
@@ -1084,16 +1091,22 @@ div.mouse {
     text-align: center; }
     .nav-tabs > li.active > a {
       border: none;
-      border-bottom: 2px solid #B4412B; }
+      background: transparent;
+      border-bottom: 1px solid #B4412B; }
       .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+        background: transparent;
         border: none;
         border-bottom: 2px solid #B4412B;
         color: #000; }
     .nav-tabs > li > a {
       border: none;
-      font-weight: bold; }
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.6); }
       .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
         background: transparent; }
+
+.section-answers .inner {
+  padding-bottom: 105px; }
 
 .section-answers .panel-group .panel {
   background: transparent; }
@@ -1104,10 +1117,11 @@ div.mouse {
 .section-answers .panel-group .panel-style {
   box-shadow: none; }
   .section-answers .panel-group .panel-style .panel-heading {
-    padding-left: 0;
-    padding-right: 0; }
+    padding: 20px 0 20px; }
     .section-answers .panel-group .panel-style .panel-heading .panel-title {
-      font-weight: bold;
+      font-size: 1.2125em;
+      font-weight: 200;
+      font-family: "Quicksand", "Times New Roman", Times, serif;
       position: relative; }
       .section-answers .panel-group .panel-style .panel-heading .panel-title a {
         display: block;
@@ -1129,6 +1143,8 @@ div.mouse {
           -ms-transition: all 0.15s ease-in-out;
           -o-transition: all 0.15s ease-in-out;
           transition: all 0.15s ease-in-out; }
+          .section-answers .panel-group .panel-style .panel-heading .panel-title a span:before {
+            font-weight: 200; }
         .section-answers .panel-group .panel-style .panel-heading .panel-title a.collapsed span {
           -moz-transform: rotate(0deg);
           -webkit-transform: rotate(0deg);
@@ -1139,12 +1155,129 @@ div.mouse {
           text-decoration: none;
           color: #B4412B; }
   .section-answers .panel-group .panel-style .panel-body {
-    border: 1px solid #e1e3ea;
-    border-bottom: none;
-    margin-top: 30px; }
+    border: none;
+    padding: 0;
+    font-size: 14px; }
 
 .section-answers .big-icon {
   font-size: 50px;
   text-align: center; }
+
+/* SECTION CONTACT 
+--------------------------------------------------- */
+/* Contact Form 7
+-------------------------------------------------------------- */
+.contact-form .title-section {
+  padding-bottom: 50px; }
+
+body div.wpcf7-response-output {
+  padding: 15px;
+  margin: 0 0 5px;
+  display: inline-block; }
+
+body div.wpcf7-validation-errors {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b; }
+
+body div.wpcf7-mail-sent-ok {
+  background-color: #dff0d8;
+  border-color: #D6E9C6;
+  color: #3c763d; }
+
+body div.wpcf7-mail-sent-ng {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+
+body div.wpcf7-spam-blocked {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+
+.wpcf7-form-control {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  color: #000;
+  display: block;
+  font-size: 18px;
+  height: 34px;
+  padding: 0 0 10px 0; }
+
+textarea.wpcf7-form-control {
+  height: 150px; }
+
+.wpcf7-form-control.wpcf7-not-valid {
+  border-color: #e41919; }
+
+.wpcf7-form-control-wrap {
+  display: block;
+  margin-bottom: 20px; }
+
+.wpcf7-textarea {
+  height: auto;
+  margin-bottom: 20px; }
+
+input.wpcf7-submit {
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0;
+  padding: 10px 30px;
+  height: auto;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: #B4412B;
+  border: 1px solid #B4412B;
+  color: #fff;
+  width: auto;
+  margin: 0 auto 65px; }
+
+.wpcf7-response-output {
+  margin-top: 15px; }
+
+body div.wpcf7-response-output {
+  padding: 15px;
+  margin: 0 0 5px;
+  display: inline-block; }
+
+body div.wpcf7-validation-errors {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b; }
+
+body div.wpcf7-mail-sent-ok {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d; }
+
+body div.wpcf7-mail-sent-ng {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+
+body div.wpcf7-spam-blocked {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+
+/* Responsive for Google noCAPTCHA reCAPTCHA */
+.wpcf7-form-control.g-recaptcha {
+  transform: scale(0.77);
+  -webkit-transform: scale(0.77);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0; }
+
+/* Contact Form 7 -------------------------------------------- */
+.call-us {
+  text-align: center;
+  padding-bottom: 67px; }
+  .call-us .phone-number {
+    font-size: 26px; }
 
 /*# sourceMappingURL=main.css.map */
