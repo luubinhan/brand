@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----------------------------
 # [Color codes]
 ----------------------------- */
@@ -634,7 +635,11 @@ table.normal tr td {
   justify-content: flex-end; }
   .mystyle .header .tool-nav > li {
     float: none; }
+    .mystyle .header .tool-nav > li.cart-menu > a {
+      height: 53px; }
     .mystyle .header .tool-nav > li > a {
+      line-height: 50px;
+      height: 50px;
       font-size: 14px;
       text-transform: uppercase;
       font-weight: 200;
@@ -654,18 +659,20 @@ table.normal tr td {
   display: flex;
   justify-content: center;
   float: none !important; }
-  .mystyle .header .primary-menu > li > a {
-    text-transform: uppercase;
-    color: #000;
-    font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 2px;
-    padding: 4px;
-    margin: 0 10px;
-    border-bottom: 1px solid transparent; }
-    .mystyle .header .primary-menu > li > a:hover {
-      background: transparent;
-      border-color: #B4412B; }
+  .mystyle .header .primary-menu > li {
+    max-width: 220px; }
+    .mystyle .header .primary-menu > li > a {
+      text-transform: uppercase;
+      color: #000;
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 2px;
+      padding: 4px;
+      margin: 0 10px;
+      border-bottom: 1px solid transparent; }
+      .mystyle .header .primary-menu > li > a:hover {
+        background: transparent;
+        border-color: #B4412B; }
 
 /* RESET BOOTSTRAP -------------------------------------------- */
 /* Footer
@@ -1279,5 +1286,85 @@ body div.wpcf7-spam-blocked {
   padding-bottom: 67px; }
   .call-us .phone-number {
     font-size: 26px; }
+
+.table-chinh-sach {
+  width: 100%; }
+  .table-chinh-sach td {
+    padding-bottom: 25px;
+    padding-top: 40px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03); }
+    .table-chinh-sach td:first-child {
+      width: 25%;
+      font-size: 18px;
+      padding-right: 20px;
+      vertical-align: top;
+      text-transform: uppercase;
+      font-weight: 700; }
+
+.section-customer-reviews .reviews-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .section-customer-reviews .reviews-list .review {
+    position: relative;
+    padding-left: 12.5rem;
+    margin-bottom: 2.5rem; }
+    .section-customer-reviews .reviews-list .review .customer {
+      position: absolute;
+      left: 0;
+      font-weight: bold; }
+    .section-customer-reviews .reviews-list .review .info {
+      margin-bottom: 18px;
+      position: relative; }
+      .section-customer-reviews .reviews-list .review .info .star-ratings-css {
+        display: inline-block; }
+      .section-customer-reviews .reviews-list .review .info .review-number {
+        font-weight: bold;
+        display: inline-block; }
+      .section-customer-reviews .reviews-list .review .info .date {
+        position: absolute;
+        right: 0;
+        top: 0; }
+
+/*
+Star using percent value
+*/
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #dddddd;
+  font-size: 18px;
+  line-height: 15px;
+  height: 15px;
+  width: 75px;
+  position: relative;
+  padding: 0; }
+  .star-ratings-css .star-ratings-css-top {
+    color: #ffce02;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    left: 0px;
+    right: 0;
+    overflow: hidden; }
+    .star-ratings-css .star-ratings-css-top span {
+      width: 15px;
+      position: relative; }
+      .star-ratings-css .star-ratings-css-top span:before {
+        content: "★";
+        display: block;
+        color: #ffce02; }
+  .star-ratings-css .star-ratings-css-bottom {
+    z-index: 0;
+    display: flex; }
+    .star-ratings-css .star-ratings-css-bottom span {
+      color: #ddd;
+      width: 15px;
+      position: relative; }
+      .star-ratings-css .star-ratings-css-bottom span:before {
+        content: "★";
+        display: block;
+        color: #ddd; }
 
 /*# sourceMappingURL=main.css.map */

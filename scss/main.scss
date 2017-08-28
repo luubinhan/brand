@@ -595,6 +595,7 @@ table.normal tr td {
         .tool-nav {
           > li.cart-menu {
             > a {
+
               background: $primary-color;
               color: #fff;
             }
@@ -636,9 +637,13 @@ table.normal tr td {
       > li {
         float: none;
         &.cart-menu {
-
+          > a {
+            height: 53px;
+          }
         }
         > a {
+          line-height: 50px;
+          height: 50px;
           font-size: $font-size-small;
           text-transform: uppercase;
           font-weight: 200;
@@ -664,6 +669,7 @@ table.normal tr td {
       justify-content: center;
       float: none !important;
       > li {
+        max-width: 220px;
         > a {
           text-transform: uppercase;   
           color: #000;                 
@@ -1408,5 +1414,105 @@ body div.wpcf7-spam-blocked {
   }
   .info-time {
 
+  }
+}
+
+.table-chinh-sach {
+  width: 100%;
+  td{
+    padding-bottom: 25px;
+    padding-top: 40px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(0,0,0,.03);
+    &:first-child {
+      width: 25%;
+      font-size: $font-size-base;
+      padding-right: 20px;
+      vertical-align: top;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+}
+
+.section-customer-reviews {
+  .reviews-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .review {
+      position: relative;
+      padding-left: 12.5rem;
+      margin-bottom: 2.5rem;
+      .customer {
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+      .info{
+        margin-bottom: 18px;
+        position: relative;
+        .star-ratings-css {
+          display: inline-block;
+        }
+        .review-number {
+          font-weight: bold;
+          display: inline-block;
+        }
+        .date {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+      
+    }
+  }
+}
+
+/*
+Star using percent value
+*/
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #dddddd;
+  font-size: 18px;
+  line-height: 15px;
+  height: 15px;
+  width: 75px;    
+  position: relative;
+  padding: 0; 
+  .star-ratings-css-top {
+    color: $yellow;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    left: 0px;
+    right: 0;
+    overflow: hidden;
+    span {
+      width: 15px;
+      position: relative;
+      &:before {
+        content: "★";
+        display: block;        
+        color: $yellow;
+      }
+    }
+  }
+  .star-ratings-css-bottom  {
+    z-index: 0;
+    display: flex;
+    span{
+      color: #ddd;
+      width: 15px;  
+      position: relative;
+      &:before {
+        content: "★";
+        display: block;        
+        color: #ddd;
+      }
+    }
   }
 }
