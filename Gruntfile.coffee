@@ -49,7 +49,7 @@ module.exports = (grunt) ->
     connect:
       server:
         options:
-          base: 'dist'
+          base: 'gh-pages'
           hostname: '<%= serverConf.hostname %>'
           port: '<%= serverConf.port %>'
           livereload: true

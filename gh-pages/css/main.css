@@ -1436,4 +1436,17 @@ Star using percent value
 .section-dac-tinh.white-bg > .inner {
   padding-bottom: 0; }
 
+.row-flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap; }
+  .row-flex .col-flex {
+    margin: 0 2% 40px;
+    width: 21%;
+    background: gray;
+    padding: 30px; }
+
 /*# sourceMappingURL=main.css.map */
