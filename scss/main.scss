@@ -595,7 +595,7 @@ table.normal tr td {
         .tool-nav {
           > li.cart-menu {
             > a {
-
+            
               background: $primary-color;
               color: #fff;
             }
@@ -644,6 +644,7 @@ table.normal tr td {
         > a {
           line-height: 50px;
           height: 50px;
+          white-space: nowrap;
           font-size: $font-size-small;
           text-transform: uppercase;
           font-weight: 200;
