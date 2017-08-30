@@ -756,17 +756,108 @@ table.normal tr td {
       font-size: 18px;
       margin-bottom: 15px;
     }
-  }
-  &.chatluong{
-    .home-text{
-      width: 100%;
-      text-align: center;
-      top: 250px;
-      left: 0;
-      right: 0;
-    }
-  }
+  } 
 }
+.home-hero-2 {
+  margin-bottom: 30px;
+  .bg-height{       
+    margin-top: 60px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    position: relative;
+    min-height: calc(100vh - 300px);
+    position: relative;    
+    &:after{
+      position: absolute;
+      right: 6%;
+      top: -50px;
+      content: "";
+      background: #dfdfe2;
+      width: 100px;
+      height: 100px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    } 
+    &:before{
+      position: absolute;
+      left: 6%;
+      bottom: -50px;
+      content: "";
+      background: #dfdfe2;
+      width: 100px;
+      height: 100px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    } 
+  }
+  .home-text{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 150px;    
+    left: 0;
+    right: 0;    
+    text-transform: uppercase;
+    .home-wrap{
+      &:before{
+        z-index: 0;
+        display: block;
+        content: "";
+        width: 250px;
+        height: 250px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border: 5px solid rgba(255,255,255,.9);
+        position: absolute;
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &:after{
+        z-index: 0;
+        content: "";
+        width: 230px;
+        height: 230px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 10px;
+         position: absolute;
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background: rgba(255,255,255,.4);
+      }
+    }
+    .hero-title {     
+      font-size: 60px;
+      line-height: 69px;
+      font-family: $serif;
+      font-weight: 200;
+      padding-top: 50px;
+      position: relative;
+      z-index: 2;
+      
+    }
+    .hero-desc {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  } 
+}
+
 
 @-webkit-keyframes scroll-inner {
     from {margin-top: 15%;}
@@ -1614,4 +1705,17 @@ Star using percent value
     background: gray;
     padding: 30px;
   } 
+}
+.section-do-cung{
+  .item-feature{
+    margin-bottom: 80px;
+    .feature-title{
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+    .feature-desc{
+      font-size: 15px;
+    }
+  }  
 }
