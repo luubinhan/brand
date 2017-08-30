@@ -12,7 +12,7 @@ module.exports = (grunt) ->
         files: ['scss/*.scss']
         tasks: ['sass']
       scripts:
-        files: ['gh-pages/*.js']     
+        files: ['docs/*.js']     
         tasks: ['htmlbuild:main']  
     htmlbuild:
       options:            
@@ -28,28 +28,28 @@ module.exports = (grunt) ->
         relative: true
         beautify: true
       main:
-        dest: 'gh-pages/'
+        dest: 'docs/'
         src: ['**/*.html','!partials/*.html']
         expand: true
         cwd: 'src'
     clean:
-      build: ['gh-pages/*.html','!css/**','!js/**']    
+      build: ['docs/*.html','!css/**','!js/**']    
       options:
         force: true
     copy:
       build:
-        dest: 'gh-pages/'
+        dest: 'docs/'
         src: ['**', '!data.json']
         expand: true
-        cwd: 'gh-pages/'
+        cwd: 'docs/'
     concat:      
       css:
         src: ['src/css/*.css'] 
-        dest: 'gh-pages/css/concat.css'         
+        dest: 'docs/css/concat.css'         
     connect:
       server:
         options:
-          base: 'gh-pages'
+          base: 'docs'
           hostname: '<%= serverConf.hostname %>'
           port: '<%= serverConf.port %>'
           livereload: true
@@ -58,9 +58,9 @@ module.exports = (grunt) ->
         sourceMap: true
       dist:
         files:          
-          'gh-pages/css/main.css': 'scss/main.scss'
-          'gh-pages/editor-style.css': 'scss/editor-style.scss'
-          'gh-pages/css/style-responsive.css': 'scss/style-responsive.scss' 
+          'docs/css/main.css': 'scss/main.scss'
+          'docs/editor-style.css': 'scss/editor-style.scss'
+          'docs/css/style-responsive.css': 'scss/style-responsive.scss' 
   require('load-grunt-tasks')(grunt)
   grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-sass')
