@@ -1,17 +1,17 @@
 /*-----------------------------
 # [Color codes]
 ----------------------------- */
-$primary-color: #B4412B;
-$secondary-color: #F79521;
-$link-color: #000;
-$link-color-hover: #B4412B;
-$primary-text-color: #000;
+$primary-color: #7DD1E1;
+$secondary-color: #696574;
+$link-color: #696574;
+$link-color-hover: darken($link-color,10%);
+$primary-text-color: rgba(0,0,0,.6);
 $bg-dark: #252525;
-$bg-gray: #DFDFE2;
+$bg-gray: #f8fcfd;
 $bg-lighter: #f8f8f8;
-$muted: #596377;
+$muted: #919191;
 $border-color: #e1e3ea;
-$input-border-color: #e5e5e5;
+$input-border-color: #7DD1E1;
 $red: #e41919;
 $black: #000;
 $orange: #f47631;
@@ -31,15 +31,14 @@ $instagram: #A4785B;
 $glutter: 30px;
 $breakpoint-sm: 768px;
 $breakpoint-xs: 560px;
+$header-height: 70px;
 
 /*-----------------------------
 # [Typography]
 ----------------------------- */
-@import url('https://fonts.googleapis.com/css?family=Prata|Quicksand:300,400,700&subset=vietnamese');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css');
-$font-size-base: 18px;
+$font-size-base: 14px;
 $font-size-large: 20px;
-$font-size-small: 14px;
-$san-serif: Prata, arial, sans-serif;
-$serif: 'Quicksand', 'Times New Roman', Times, serif;
+$font-size-small: 12px;
+$serif: "Montserrat Alternates", arial, sans-serif;
+$san-serif: 'Nunito', arial, sans-serif;
 $monospace: Inconsolata, monospace;

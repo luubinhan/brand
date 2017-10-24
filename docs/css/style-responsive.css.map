@@ -2,8 +2,9 @@
 	"version": 3,
 	"file": "style-responsive.css",
 	"sources": [
-		"../../scss/style-responsive.scss"
+		"../../scss/style-responsive.scss",
+		"../../scss/_variable.scss"
 	],
 	"names": [],
-	"mappings": ""
+	"mappings": "ACAA;;gCAEgC;AAyBhC;;gCAEgC;AAMhC;;gCAEgC"
 }

@@ -90,3 +90,10 @@ http://ionicons.com/
 https://www.tuftandneedle.com
 
 https://www.filemarodion.gr/en/product/traditional-melekouni-3/
+
+https://css-tricks.com/many-tools-shape-morphing/
+https://tympanus.net/codrops/2017/08/08/morphing-page-transition/
+http://lmgonzalves.github.io/segment/
+http://martinpriotti.com/
+
+https://alvarotrigo.com/fullPage
