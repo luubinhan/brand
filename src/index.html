@@ -1,43 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  <title>MyStyle</title>
-  <!-- build:section component.common_header --><!-- /build -->  
+<head>  
+  <title>Ru9</title>
+  <!-- build:section component.common_header --><!-- /build --> 
+  <link rel="stylesheet" type="text/css" href="fullpage/jquery.fullPage.css" />  
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="fullpage/scrolloverflow.min.js"></script>  
+  <script type="text/javascript" src="fullpage/jquery.fullPage.min.js"></script>  
+  <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#ffffff', '#012d41', '#08d4a1', '#e81145', '#feae01'],
+       	css3: true
+      });
+		});
+	</script>
 </head>
 <body class="mystyle page-home">
-<!-- build:section component.primary_menu --><!-- /build -->
-<div id="sectionHero" class="section-home home-hero" style="background-image:url('https://www.tuftandneedle.com/images/shop/img_module_1_1500w-e3fe13c0.jpg')">
-  <div class="inner">
-    <div class="container">
-      <div class="home-text">
-        <div class="home-wrap">
-          <div class="hero-title">
-            Here for 
-            <br>
-            every 
-            <br>
-            good sleep
-          </div>
-          <div class="hero-desc">
-            Ru9 không phải chiếc nệm êm nhất, mà là nệm phù hợp nhất cho bạn giấc ngủ êm.
-          </div>
-          <div class="local-scroll">
-            <a href="#about" class="btn btn-primary">See More</a> &nbsp;
-            <a href="" class="btn btn-default" target="_blank">Buy Now</a>
-          </div>
-        </div>
-      </div>
+    <div id="nav">
+      <h2 class="active"><span>a</span><span>b</span><span>o</span><span>u</span><span>t</span></h2>
+      <h2 class=""><span>w</span><span>o</span><span>r</span><span>k</span><span>s</span></h2>
     </div>
-  </div><!-- inner -->
-</div><!-- section home-hero -->
-<div id="sectionDacTinh" class="section-home dac-tinh">
+  
+      <!-- build:section component.primary_menu --><!-- /build -->
+      <div id="fullpage">
+      <!--======= HERO =======-->
+      <div id="sectionHero" class="section section-home home-hero" style="background-image:url('https://www.tuftandneedle.com/images/shop/img_module_1_1500w-e3fe13c0.jpg')">
+        <div class="inner">
+          <div class="container">
+            <div class="home-text">
+              <div class="home-wrap">
+                <div class="hero-title">
+                  Here for 
+                  <br>
+                  every 
+                  <br>
+                  good sleep
+                </div>
+                <div class="hero-desc">
+                  Ru9 không phải chiếc nệm êm nhất, mà là nệm phù hợp nhất cho bạn giấc ngủ êm.
+                </div>
+                <div class="local-scroll">
+                  <a href="#about" class="btn btn-primary">See More</a> &nbsp;
+                  <a href="" class="btn btn-default" target="_blank">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- inner -->
+      </div><!-- section home-hero -->
+      <!--======= /HERO =======-->
 
-</div>
-<div id="sectionUuDiem" class="section-home uu-diem">
-    
-</div>
-<div id="sectionUuDiem" class="section-home chinh-sach">
-    
-</div>
+      <!--======= Comfort & Support =======-->
+      <div id="sectionComfort" class="section section-home comfort">
+        <div class="inner">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="title-section">
+                Comfort & Support
+              </h2>        
+            </div><!-- section-header -->
+            <div class="section-body">
+              
+            </div> <!-- section-body -->
+          </div><!-- container -->
+        </div><!-- inner -->
+      </div><!-- section -->
+      <!--======= /Comfort & Support =======-->
+
+      <!--======= Keeps You Cool =======-->
+      <div id="sectionCool" class="section section-home cool">
+        <div class="inner">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="title-section">
+                Keeps You Cool
+              </h2>
+              <div class="title-section-details">
+                Our foam works in three ways to draw heat from your body and disperse it out of the mattress.
+              </div>
+            </div><!-- section-header -->
+            <div class="section-body">
+              
+            </div> <!-- section-body -->
+          </div><!-- container -->
+        </div><!-- inner -->
+      </div><!-- section -->
+      <!--======= /Keeps You Cool =======-->
+
+      <!--======= Compatible With Most Bed Frames =======-->
+      <div id="sectionCompatible" class="section section-home compatible">
+        <div class="inner">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="title-section">
+                Compatible With Most Bed Frames
+              </h2>
+            </div><!-- section-header -->
+            <div class="section-body">
+              
+            </div> <!-- section-body -->
+          </div><!-- container -->
+        </div><!-- inner -->
+      </div><!-- section -->
+      <!--======= /Compatible With Most Bed Frames =======-->
+
+      <!--======= Unbeatable Service =======-->
+      <div id="unbeatableService" class="section section-home unbeatable-service">
+        <div class="inner">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="title-section">
+                Pricing & Product Details
+              </h2>
+              <div class="title-section-details">
+                We based our pricing on a formula that affords us quality materials and allows us to treat our employees and customers right. The result is a high-quality, honest product at a fair price.
+              </div>
+            </div><!-- section-header -->
+            <div class="section-body">
+
+            </div> <!-- section-body -->
+          </div><!-- container -->
+        </div><!-- inner -->
+      </div><!-- section -->
+      <!--======= /Unbeatable Service =======-->
+
+      <!-- ======= Ships Free in a Small Box =======-->
+      <div id="unbeatableShips" class="section section-home ships">
+        <div class="inner">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="title-section">
+                Unbeatable Service
+              </h2>        
+            </div><!-- section-header -->
+            <div class="section-body">
+              
+            </div> <!-- section-body -->
+          </div><!-- container -->
+        </div><!-- inner -->
+      </div><!-- section -->
+      <!-- ======= /Ships Free in a Small Box =======-->
+
+      <!-- ======= Pricing & Product Details =======-->
+      <div id="unbeatablePricing" class="section section-home pricing">
+        <div class="inner">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="title-section">
+                Pricing & Product Details
+              </h2>
+              <div class="title-section-details">
+                We based our pricing on a formula that affords us quality materials and allows us to treat our employees and customers right. The result is a high-quality, honest product at a fair price.
+              </div>
+            </div><!-- section-header -->
+            <div class="section-body">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">PRICE, SIZE & WEIGHT</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">INSIDE MATERIAL</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">COVER MATERIAL</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">SAFETY & MATERIAL</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                  Our entire mattress has earned UL GREENGUARD Gold Certification. GREENGUARD Certified products aid in the creation of healthier indoor environments, and release fewer pollutants that can contribute to health issues including asthma and other respiratory issues. This GREENGUARD label validates that the T&N Mattress is low-emitting and supports healthy indoor environments. UL is a global independent safety science company with more than a century of expertise innovating safety solutions. For more information, check out the GREENGUARD Certification website here.
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                  Our T&N Mattress cover is made with a blend of Polyester and Tactel (nylon). It has a soft feel which is very pleasant to the touch. Tactel is commonly used in clothing for men, women and children as an alternative to cotton. It is also known to dry 6-8 times faster than cotton, which helps you sleep cooler, longer. With durability in mind, we've designed a fabric that will last. Our Mattress cover fabric is pilling and tearing resistant. Our T&N Mattress cover has been tested and certified by OEKO-TEX®. OEKO-TEX® tests for harmful substances in textiles and materials. The more intensive the skin contact of a product and the more sensitive the skin, the stricter the human-ecological requirements that need to be complied with.
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                  We are proud to hold the STANDARD 100 by OEKO-TEX®: Class I certification on the T&N Mattress cover. While our mattress was not designed for babies and toddlers, the STANDARD 100 by OEKO-TEX®: Class I certification signifies that all parts of an article meet the OEKO-TEX® requirements for a product used by babies and toddlers up to 3 years of age. For more information about OEKO-TEX® standards, click here.
+                </div>
+                <div role="tabpanel" class="tab-pane" id="settings">
+                  <p>U.S. law requires that every mattress sold needs to pass two very specific burn tests: an "open flame" test and a "cigarette" test.</p>
+                  <p>In order to pass these two tests, a mattress typically needs to have a component known as a fire barrier that self extinguishes the mattress when on fire.</p>
+                </div>
+              </div><!-- tab-content -->
+            </div><!-- section-body -->
+          </div><!-- container -->
+        </div><!-- inner -->
+      </div><!-- section -->
+      <!-- ======= /Pricing & Product Details =======-->
+
+      <!-- ======= Customer Love ======= -->
+      <div id="customerLove" class="section section-home customer-love">
+        <div class="inner">
+          <div class="container">
+            <div class="section-header">	        
+              <div class="title-section-details">
+                <a class="link" href="">@Ru9 INSTAGRAM</a>
+              </div>
+            </div>
+            <div class="section-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <img src="https://www.tuftandneedle.com/images/mattress_reviews/img_instagram_1-c93b8736.jpg" alt="">
+                </div>
+                <div class="col-sm-3">
+                  <img src="https://www.tuftandneedle.com/images/mattress_reviews/img_instagram_2-a0c47428.jpg" alt="">
+                </div>
+                <div class="col-sm-3">
+                  <img src="https://www.tuftandneedle.com/images/mattress_reviews/img_instagram_3-13f21188.jpg" alt="">
+                </div>
+                <div class="col-sm-3">
+                  <img src="https://www.tuftandneedle.com/images/mattress_reviews/img_instagram_4-aefbd912.jpg" alt="">
+                </div>
+              </div>
+            </div><!-- section-body -->
+          </div><!-- container -->
+        </div><!-- inner -->
+      </div><!-- section -->
+      <!-- ======= /Customer Love ======= -->    
+      </div><!-- fullpage -->
 <!-- build:section layout.footer --><!-- /build -->
