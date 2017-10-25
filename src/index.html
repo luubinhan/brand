@@ -5,45 +5,157 @@
   <!-- build:section component.common_header --><!-- /build --> 
   <link rel="stylesheet" type="text/css" href="fullpage/jquery.fullPage.css" />  
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  
   <script type="text/javascript" src="fullpage/scrolloverflow.min.js"></script>  
   <script type="text/javascript" src="fullpage/jquery.fullPage.min.js"></script>  
   <script type="text/javascript">
+    function toggleSectionIndex(anchorLink, index) {
+      // remove all class
+      $('#header').removeClass(function(index, className) {
+        return (className.match (/(^|\s)loaded-section-\S+/g) || []).join(' ');  
+      });      
+      if (index !== 1) {
+        $('#header').addClass('loaded-section-' + index);
+      }
+      
+      switch (index) {
+      case 1:
+        /* anime({
+          targets: '#header',
+          backgroundColor: 'rgba(255,255,255,0)',          
+          easing: 'easeInOutSine',
+          duration: 300
+        }) */
+        break;
+      case 2:        
+        break;
+      case 3:        
+        break;
+      default:
+        break;
+      }
+    }
+
+    function handleLoadingSection(index, nextIndex, direction) {
+      $('#header').removeClass(function(index, className) {
+        return (className.match (/(^|\s)loading-section-\S+/g) || []).join(' ');  
+      });      
+      if (index !== 1) {
+        $('#header').addClass('loading-section-' + index);
+      }
+    }    
+   
 		$(document).ready(function() {
+      var DOMenter = document.querySelector('.enter');
+      charming(DOMenter);
+      var DOMenterLetter = Array.from(DOMenter.querySelectorAll('span'));     
+      function enterHoverInFn() {
+        setTimeout( function(){
+          anime.remove(DOMenterLetter);
+          anime({
+            targets: DOMenterLetter,
+            delay: function(t, i) {
+              return i * 15
+            },
+            translateY: [
+              {value: 10, duration: 150, easing: 'easeInQuad'},
+              {value: [-10,0], duration: 150, easing: 'easeInQuad'},
+            ],
+            opacity: [
+              {value: 0, duration: 150, easing: 'linear'},
+              {value: 1, duration: 150, easing: 'linear'}
+            ],
+            color: {
+              value: '#08d4a1',
+              duration: 1,
+              delay: function(t,i,l) {
+                 return i*15+150
+              }
+            }
+          })
+        },50)
+      }
+      function enterHoverOutFn() {           
+        anime.remove(DOMenterLetter);
+        anime({
+          targets: DOMenterLetter,
+          delay: function(t,i,l) { return (l-i-1)*15 },
+          translateY: [
+            {value: 10, duration: 150, easing: 'easeInQuad'},
+            {value: [-10,0], duration: 150, easing: 'easeOutQuad'}
+          ],
+          opacity: [
+            {value: 0, duration: 150, easing: 'linear'},
+            {value: 1, duration: 150, easing: 'linear'}
+          ],
+          color: {
+            value: '#012d41',
+            duration: 1,
+            delay: function(t,i,l) { return (l-i-1)*15+150 },
+          }
+        });
+      };
+      DOMenter.addEventListener('mouseenter', enterHoverInFn);
+      DOMenter.addEventListener('mouseleave', enterHoverOutFn);
+      
+      // Split and replace
+      $.each( $('#nav h2 a'), function() {
+        var linkText = $(this).text().replace(' ', '').toLowerCase().split('');
+        $(this).text('');        
+        for (var i = 0; i < linkText.length; i += 1) {
+          $(this).append('<span>' + linkText[i] + '</span>');
+        }
+      });
+      
 			$('#fullpage').fullpage({
-				sectionsColor: ['#ffffff', '#012d41', '#08d4a1', '#e81145', '#feae01'],
-       	css3: true
+        sectionsColor: ['#ffffff', '#012d41', '#252525', '#e81145', '#feae01'],
+        css3: true,
+        anchors: ['linkSectionHero', 'linksectionComfort', 'linksectionCool', 'linksectionCompatible', 'linkSectionShips', 'linkSectionService', 'linkSectionPricing', 'linkCustomerLove'],
+        menu: '#nav',
+        easingcss3: "cubic-bezier(0.77,0,0.175,1)",
+        scrollingSpeed: 750,
+        navigation: true,
+        afterLoad: toggleSectionIndex,
       });
 		});
 	</script>
 </head>
 <body class="mystyle page-home">
     <div id="nav">
-      <h2 class="active"><span>a</span><span>b</span><span>o</span><span>u</span><span>t</span></h2>
-      <h2 class=""><span>w</span><span>o</span><span>r</span><span>k</span><span>s</span></h2>
+      <h2 data-menuanchor="linkSectionHero" class="active"><a href="#linkSectionHero">Ru9</a></h2>
+      <h2 data-menuanchor="linksectionComfort" class=""><a href="#linksectionComfort">Comfort</a></h2>
+      <h2 data-menuanchor="linksectionCool" class=""><a href="#linksectionCool">Cool</a></h2>
+      <h2 data-menuanchor="linksectionCompatible" class=""><a href="#linksectionCompatible">Compatible</a></h2>
+      <h2 data-menuanchor="linkSectionShips" class=""><a href="#linkSectionShips">Ships Free</a></h2>
+      <h2 data-menuanchor="linkSectionService" class=""><a href="#linkSectionService">Service</a></h2>
+      <h2 data-menuanchor="linkSectionPricing" class=""><a href="#linkSectionPricing">Pricing</a></h2>
+      <h2 data-menuanchor="linkCustomerLove" class=""><a href="#linkCustomerLove">Customer</a></h2>
     </div>
   
       <!-- build:section component.primary_menu --><!-- /build -->
       <div id="fullpage">
       <!--======= HERO =======-->
-      <div id="sectionHero" class="section section-home home-hero" style="background-image:url('https://www.tuftandneedle.com/images/shop/img_module_1_1500w-e3fe13c0.jpg')">
+      <div id="sectionHero" class="section section-home section-1 home-hero" style="background-image:url('http://imgs.abduzeedo.com/files/gismullr/beautifulhouses/bh226/tr10.jpg')">
         <div class="inner">
           <div class="container">
             <div class="home-text">
               <div class="home-wrap">
                 <div class="hero-title">
-                  Here for 
-                  <br>
-                  every 
-                  <br>
-                  good sleep
+                  <div>
+                    here for 
+                  </div>
+                  <div>
+                    every
+                  </div> 
+                  <div>
+                    good sleep
+                  </div>
                 </div>
                 <div class="hero-desc">
-                  Ru9 không phải chiếc nệm êm nhất, mà là nệm phù hợp nhất cho bạn giấc ngủ êm.
+                  <strong>Ru9</strong> không phải chiếc nệm <del>êm nhất</del>, mà là nệm <strong>phù hợp nhất</strong> cho bạn giấc ngủ êm.
                 </div>
                 <div class="local-scroll">
-                  <a href="#about" class="btn btn-primary">See More</a> &nbsp;
-                  <a href="" class="btn btn-default" target="_blank">Buy Now</a>
+                  <a href="" class="enter">Tại Sao ?</a>
                 </div>
               </div>
             </div>
@@ -53,16 +165,59 @@
       <!--======= /HERO =======-->
 
       <!--======= Comfort & Support =======-->
-      <div id="sectionComfort" class="section section-home comfort">
+      <div id="sectionComfort" class="section section-home section-2">
+        <div class="left-img">
+          <img src="http://imgs.abduzeedo.com/files/gismullr/beautifulhouses/bh226/tr11.jpg" alt="">
+        </div>
         <div class="inner">
           <div class="container">
             <div class="section-header">
               <h2 class="title-section">
-                Comfort & Support
+                Ưu Điểm Vượt Trội
               </h2>        
             </div><!-- section-header -->
             <div class="section-body">
-              
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/1-down-science.svg" alt="">
+                    </div>
+                    <div class="feature-title">
+                      DOWN TO A SCIENCE
+                    </div>
+                    <div class="feature-desc">
+                      When it comes to insulation, duck down is the best temperature regulator out there. Plus, we love that it's humanely sourced.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/2-light-right.svg" alt="">
+                    </div>
+                    <div class="feature-title">
+                      NICE AND LIGHT
+                    </div>
+                    <div class="feature-desc">
+                      You’ll never feel weighed down because the breathable cotton cover is thirty percent lighter than others on the market.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/3-never-out-season.svg" alt="">
+                    </div>
+                    <div class="feature-title">
+                      NEVER OUT OF SEASON
+                    </div>
+                    <div class="feature-desc">
+                      Forget about swapping or switching midyear — the Casper duvet is designed for comfort in any season.
+                    </div>
+                  </div>
+                </div>
+              </div><!-- row -->
             </div> <!-- section-body -->
           </div><!-- container -->
         </div><!-- inner -->
@@ -70,19 +225,62 @@
       <!--======= /Comfort & Support =======-->
 
       <!--======= Keeps You Cool =======-->
-      <div id="sectionCool" class="section section-home cool">
+      <div id="sectionCool" class="section section-home section-3">     
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>   
         <div class="inner">
           <div class="container">
             <div class="section-header">
               <h2 class="title-section">
-                Keeps You Cool
+                Cho một giấc ngủ trọn vẹn
               </h2>
               <div class="title-section-details">
-                Our foam works in three ways to draw heat from your body and disperse it out of the mattress.
+                Sản phẩm kết hợp giữa chất liệu cao su thiên nhiên và bông ép kháng khuẩn, có độ cứng, độ đàn hồi tốt, mang đến cảm giác êm ái.
               </div>
             </div><!-- section-header -->
             <div class="section-body">
-              
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/1-down-science.svg" alt="">
+                    </div>
+                    <div class="feature-title">
+                      DOWN TO A SCIENCE
+                    </div>
+                    <div class="feature-desc">
+                      When it comes to insulation, duck down is the best temperature regulator out there. Plus, we love that it's humanely sourced.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/2-light-right.svg" alt="">
+                    </div>
+                    <div class="feature-title">
+                      NICE AND LIGHT
+                    </div>
+                    <div class="feature-desc">
+                      You’ll never feel weighed down because the breathable cotton cover is thirty percent lighter than others on the market.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/3-never-out-season.svg" alt="">
+                    </div>
+                    <div class="feature-title">
+                      NEVER OUT OF SEASON
+                    </div>
+                    <div class="feature-desc">
+                      Forget about swapping or switching midyear — the Casper duvet is designed for comfort in any season.
+                    </div>
+                  </div>
+                </div>
+              </div><!-- row -->
             </div> <!-- section-body -->
           </div><!-- container -->
         </div><!-- inner -->
@@ -90,49 +288,123 @@
       <!--======= /Keeps You Cool =======-->
 
       <!--======= Compatible With Most Bed Frames =======-->
-      <div id="sectionCompatible" class="section section-home compatible">
+      <div id="sectionCompatible" class="section section-home section-4">
         <div class="inner">
           <div class="container">
             <div class="section-header">
               <h2 class="title-section">
-                Compatible With Most Bed Frames
+                Phù hợp với chuẩn thiết kế Việt Nam
               </h2>
             </div><!-- section-header -->
             <div class="section-body">
-              
+              <div class="row mb-30">
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/1-down-science.svg" alt="">
+                    </div>                   
+                    <div class="feature-desc">
+                        Box Springs
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/2-light-right.svg" alt="">
+                    </div>                   
+                    <div class="feature-desc">
+                        Slatted Frames
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/3-never-out-season.svg" alt="">
+                    </div>                   
+                    <div class="feature-desc">
+                        Adjustable Frames
+                    </div>
+                  </div>
+                </div>
+              </div><!-- row -->
+              <div class="align-center">
+                <img src="https://www.tuftandneedle.com/images/shop/img_module_5-ce5e003c.jpg" alt="">
+              </div>
             </div> <!-- section-body -->
           </div><!-- container -->
         </div><!-- inner -->
       </div><!-- section -->
       <!--======= /Compatible With Most Bed Frames =======-->
 
-      <!--======= Unbeatable Service =======-->
-      <div id="unbeatableService" class="section section-home unbeatable-service">
+      <!--======= Ships Free in a Small Box =======-->
+      <div id="sectionShips" class="section section-home section-5">
         <div class="inner">
           <div class="container">
             <div class="section-header">
               <h2 class="title-section">
-                Pricing & Product Details
+                 Giao hàng và lắp đặt miễn phí
               </h2>
               <div class="title-section-details">
-                We based our pricing on a formula that affords us quality materials and allows us to treat our employees and customers right. The result is a high-quality, honest product at a fair price.
+                  Đơn hàng sẽ được giao tới tận nhà của khách hàng, ngoại trừ các trường hợp hạn chế như khu vực văn phòng, chung cư cao tầng có quy định hạn chế ra vào, các khu cao tầng không có khu vực gửi xe. Trong các trường hợp hạn chế này, nếu khách hàng có nhu cầu giao tận nhà, vui lòng gọi tổng đài CSKH để được hỗ trợ. 
               </div>
             </div><!-- section-header -->
             <div class="section-body">
-
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/1-down-science.svg" alt="">
+                    </div>
+                    <div class="feature-title">
+                      DOWN TO A SCIENCE
+                    </div>
+                    <div class="feature-desc">
+                      When it comes to insulation, duck down is the best temperature regulator out there. Plus, we love that it's humanely sourced.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/2-light-right.svg" alt="">
+                    </div>
+                    <div class="feature-title">
+                      NICE AND LIGHT
+                    </div>
+                    <div class="feature-desc">
+                      You’ll never feel weighed down because the breathable cotton cover is thirty percent lighter than others on the market.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="item-feature">
+                    <div class="feature-image">
+                      <img src="https://casper.com/assets-spa/images/duvet-valueprop/3-never-out-season.svg" alt="">
+                    </div>
+                    <div class="feature-title">
+                      NEVER OUT OF SEASON
+                    </div>
+                    <div class="feature-desc">
+                      Forget about swapping or switching midyear — the Casper duvet is designed for comfort in any season.
+                    </div>
+                  </div>
+                </div>
+              </div><!-- row -->
             </div> <!-- section-body -->
           </div><!-- container -->
         </div><!-- inner -->
       </div><!-- section -->
-      <!--======= /Unbeatable Service =======-->
+      <!--======= /Ships Free in a Small Box =======-->
 
-      <!-- ======= Ships Free in a Small Box =======-->
-      <div id="unbeatableShips" class="section section-home ships">
+      <!-- ======= Unbeatable Service  =======-->
+      <div id="sectionService" class="section section-home section-6">
         <div class="inner">
           <div class="container">
             <div class="section-header">
               <h2 class="title-section">
-                Unbeatable Service
+                Chính sách hậu mãi
               </h2>        
             </div><!-- section-header -->
             <div class="section-body">
@@ -141,15 +413,15 @@
           </div><!-- container -->
         </div><!-- inner -->
       </div><!-- section -->
-      <!-- ======= /Ships Free in a Small Box =======-->
+      <!-- ======= /Unbeatable Service  =======-->
 
       <!-- ======= Pricing & Product Details =======-->
-      <div id="unbeatablePricing" class="section section-home pricing">
+      <div id="sectionPricing" class="section section-home section-7">
         <div class="inner">
           <div class="container">
             <div class="section-header">
               <h2 class="title-section">
-                Pricing & Product Details
+                Giá & Thông số sản phẩm
               </h2>
               <div class="title-section-details">
                 We based our pricing on a formula that affords us quality materials and allows us to treat our employees and customers right. The result is a high-quality, honest product at a fair price.
@@ -158,10 +430,10 @@
             <div class="section-body">
               <!-- Nav tabs -->
               <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">PRICE, SIZE & WEIGHT</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">INSIDE MATERIAL</a></li>
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">COVER MATERIAL</a></li>
-                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">SAFETY & MATERIAL</a></li>
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Kích thước, Cân nặng</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Chất liệu</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Bao nệm</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Bảo quản</a></li>
               </ul>
 
               <!-- Tab panes -->
@@ -187,13 +459,13 @@
       <!-- ======= /Pricing & Product Details =======-->
 
       <!-- ======= Customer Love ======= -->
-      <div id="customerLove" class="section section-home customer-love">
+      <div id="customerLove" class="section section-home section-8">
         <div class="inner">
           <div class="container">
             <div class="section-header">	        
-              <div class="title-section-details">
+              <h2 class="title-section">
                 <a class="link" href="">@Ru9 INSTAGRAM</a>
-              </div>
+              </h2>
             </div>
             <div class="section-body">
               <div class="row">

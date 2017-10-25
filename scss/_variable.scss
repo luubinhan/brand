@@ -5,7 +5,7 @@ $primary-color: #012d41;
 $secondary-color: #08d4a1;
 $link-color: #08d4a1;
 $link-color-hover: darken($link-color,10%);
-$primary-text-color: rgba(0,0,0,.6);
+$primary-text-color: #363636;
 $bg-dark: #252525;
 $bg-gray: #f8fcfd;
 $bg-lighter: #f8f8f8;
@@ -25,10 +25,20 @@ $twitter: #1DA0F2;
 $google: #DC4A38;
 $instagram: #A4785B;
 
+$sectionColor1: #fff;
+$sectionColor2: #012d41;
+$sectionColor3: #08d4a1;
+$sectionColor4: #e81145;
+$sectionColor5: #feae01;
+$sectionColor6: #fff;
+$sectionColor7: #012d41;
+$sectionColor8: #08d4a1;
+$sectionColor9: #e81145;
+
 /*-----------------------------
 # [Size]
 ----------------------------- */
-$glutter: 30px;
+$glutter: 50px;
 $breakpoint-sm: 768px;
 $breakpoint-xs: 560px;
 $header-height: 70px;
@@ -37,8 +47,8 @@ $header-height: 70px;
 # [Typography]
 ----------------------------- */
 $font-size-base: 14px;
-$font-size-large: 20px;
-$font-size-small: 12px;
-$serif: "Montserrat Alternates", arial, sans-serif;
-$san-serif: 'Nunito', arial, sans-serif;
+$font-size-large: 3rem;
+$font-size-small: 13px;
+$serif: "Nunito", arial, sans-serif;
+$san-serif: 'Montserrat Alternates', arial, sans-serif;
 $monospace: Inconsolata, monospace;

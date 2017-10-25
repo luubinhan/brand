@@ -8,9 +8,9 @@ html {
   font-size: 100.01%;
 }
 body {
-  font-size: 14px;
+  font-size: 16px;
   color: $primary-text-color;
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: $serif;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +36,7 @@ a:hover {
   transition: all 0.1s ease-in-out;
 }
 img { max-width: 100%; }
-h1,h2,h3,h4,h5,h6 {font-family: $san-serif;}
+h1,h2,h3,h4,h5,h6 {font-family: $serif;}
 h1 {
   @include heading1;
 }
@@ -612,23 +612,24 @@ table.normal tr td {
 /*let override default bootstrap style*/
 .nav-tabs {
   margin: 0 0 40px;
-  border-bottom: 2px solid $border-color;
+  border-bottom: 4px solid $border-color;
   display: flex;
   justify-content: space-between;
-  
+  height: 51px;
   > li{
     float: none;    
     flex-grow: 1;
-    margin-bottom: -2px;
+    margin-bottom: -4px;
     text-align: center;
     &.active {
       > a{
         border: none;
-        border-bottom: 2px solid $primary-color;
+        border-bottom: 4px solid $primary-color;        
+        color: $secondary-color;
         &:hover,
         &:focus {
           border: none;
-          border-bottom: 2px solid $primary-color;
+          border-bottom: 4px solid $primary-color;
           color: $primary-text-color;
         }
       }      
@@ -636,6 +637,8 @@ table.normal tr td {
     > a {
       border: none;
       font-weight: bold;
+      font-size: 1.2rem;
+      color: $primary-text-color;
       &:hover,
       &:focus{
         background: transparent;
@@ -687,15 +690,37 @@ table.normal tr td {
   background-size: 100% auto;
   position: relative;
 	.home-text{		
+    text-align: center;
 		.hero-title {			
-      font-size: 40px;
-      text-align: center;
+      color: #111;
+      font-size: 6rem;
+      line-height: 1;            
+      font-weight: 700;
+      margin-bottom: 4rem;
+      div {
+        &:nth-child(1) {
+          font-weight: 200;          
+        }
+        &:nth-child(2) { 
+          font-weight: 300;
+        }
+        &:nth-child(3) {
+          font-weight: 700;
+          color: #000;
+        }
+      }      
 		}
 		.hero-desc {
-			font-size: 18px;
-			margin-bottom: 15px;
+			font-size: 1.2rem;
+			margin-bottom: 2rem;
 		}
-	}
+  }
+  .local-scroll {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+  }
 }
 
 #header {
@@ -704,18 +729,24 @@ table.normal tr td {
   left: 0;
   right: 0;
   z-index: 88;
-  height: $headerHeight;
-}
-.master{
-  
-}
-.header{
-  .nav{
-    > li {
+  padding: 50px 0;      
+  @include transition(all 0.5s);    
+  &[class^="loaded-section-"] {
+   padding: 10px 0;
+   box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
+   background: rgba(255,255,255,.07);
+  }  
+  .navbar {
+    margin-bottom: 0;
+  }
+  .navbar-brand{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  &.loaded-section-3 {
+    .dat-hang {
       > a {
-        &:hover{
-         
-        }
+        background: $secondary-color;
       }
     }
   }
@@ -725,11 +756,11 @@ table.normal tr td {
   
 }
 #fullpage {
-  transition: all 750ms cubic-bezier(0.77,0,0.175,1) !important;
+  /* transition: all 750ms cubic-bezier(0.77,0,0.175,1) !important;
   -o-transition: all 750ms cubic-bezier(0.77,0,0.175,1) !important;
   -ms-transition: all 750ms cubic-bezier(0.77,0,0.175,1) !important;
   -moz-transition: all 750ms cubic-bezier(0.77,0,0.175,1) !important;
-  -webkit-transition: all 750ms cubic-bezier(0.77,0,0.175,1) !important;
+  -webkit-transition: all 750ms cubic-bezier(0.77,0,0.175,1) !important; */
 }
 #nav {
   overflow: hidden;
@@ -737,9 +768,11 @@ table.normal tr td {
   z-index: 99;
   top: 50%;
   left: 0;
-  margin-top: -40px;
+  margin-top: -70px;
   padding-left: 38px;
-  cursor: default;
+  width: 60px;
+  height: 120px;
+  
   &:before {
     content: '';
     width: 20px;
@@ -748,18 +781,67 @@ table.normal tr td {
     top: 50%;
     left: 0;
     margin-top: -0.5px;
-    background: #FFF;
+    background: #ccc;
     display: block;
   }
   h2 {
-    float: right;
-    display: block;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    display: block;        
     font-size: 13px;
-    color: #FFF;
+    color: #fff;
     text-align: center;
+    font-family: monospace;
+    a {
+      color: #ccc;
+    }
+    &.active {
+      span {
+        opacity: 1;
+        transform: none;
+        -o-transform: none;
+        -ms-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transition-duration: 250ms;
+        -o-transition-duration: 250ms;
+        -ms-transition-duration: 250ms;
+        -moz-transition-duration: 250ms;
+        -webkit-transition-duration: 250ms;
+        &:nth-child(1) {
+          @include transitionDelay(250ms);
+        }
+        &:nth-child(2) {
+          @include transitionDelay(350ms);
+        }
+        &:nth-child(3) {
+          @include transitionDelay(450ms);
+        }
+        &:nth-child(4) {
+          @include transitionDelay(550ms);
+        }
+        &:nth-child(5) {
+          @include transitionDelay(650ms);
+        }
+        &:nth-child(6) {
+          @include transitionDelay(750ms);
+        }
+        &:nth-child(7) {
+          @include transitionDelay(850ms);
+        }
+        &:nth-child(8) {
+          @include transitionDelay(950ms);
+        }
+        &:nth-child(9) {
+          @include transitionDelay(1050ms);
+        }
+      }
+    }
     span {
       width: 10px;
-      /* opacity: 0; */
+      opacity: 0;
       display: block;
       transform: translateY(10px);
       -o-transform: translateY(10px);
@@ -796,4 +878,282 @@ table.normal tr td {
     color: #777;
     font-size: .7rem;
   }
+}
+.section {  
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    .title-section {
+      font-size: $font-size-large;
+      a {
+        color: $primary-color;
+      }
+    }
+    .title-section-details {
+      max-width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.toolbar {
+  .cart-menu {
+    > a {
+      font-size: 0;
+      text-indent: -9999em;
+      display: block;
+      position: relative;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.7);
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      &:after {
+        content: "\f3f7";
+        font-family: "Ionicons";        
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        text-rendering: auto;
+        line-height: 1;
+        display: block;
+        position: absolute;
+        left: 11px;
+        top: 9px;
+        font-size: 2rem;        
+      }
+    }
+  }
+  .dat-hang {    
+    > a {
+      @include transition(all 0.5s);    
+      background: $primary-color;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-left: 15px;
+      color: #ffffff !important;
+      border-radius: 3rem;
+    }
+  }  
+}
+.primary-menu {
+  > li {
+    > a {
+      text-transform: lowercase;
+    }
+  }
+}
+/* COMPONENT: share-social-component
+-------------------------------------------------------------- */
+.widget_social {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 7; 
+  padding-right: 30px;   
+  .follow-title {
+    font-size: $font-size-small;
+    color: $muted;
+    font-family: monospace;
+  }
+  .widget-body {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    p {
+      margin-bottom: 0;
+    }
+    a {
+      color: #000;
+    }
+  }
+}
+
+.fp-viewing-linksectionComfort {
+  .widget_social {
+    .widget-body {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* COMPONENT: share-social-component -------------------------------------------------------------- */
+
+.enter span {
+  display: inline-block;
+}
+.enter {
+  color: #012d41;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: pre;
+  pointer-events: auto;
+}
+
+.shape {
+  display: block;
+  width: 100vh;
+  height: 100vh;
+  background: #000;  
+  position: absolute;
+  &.blue {
+    background: darken($sectionColor2, 5%);
+  }
+}
+.section-2 {
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  .inner {
+    position: relative;
+    z-index: 7;
+  }
+  .left-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+      opacity: .7;
+    }
+    &:after {
+      content: "";
+      display: block;
+      height: 200vh;
+      width: 700px;
+      background: $primary-color;
+      z-index: 1;
+      position: absolute;
+      left: 50%;
+      top: -314px;
+      @include transform(rotate(-25deg));
+    }
+    &:before {
+      content: "";
+      display: block;
+      height: 100vh;
+      width: 500px;
+      background: $secondary-color;
+      z-index: 2;
+      position: absolute;
+      left: -50%;
+      top: -380px;
+      @include transform(rotate(45deg));
+    }
+  }
+}
+.section-3 {
+  position: relative;
+  color: #fff;
+  .inner {
+    position: relative;
+    z-index: 2;    
+  }  
+  .shape {
+    background: lighten($sectionColor3,5%);
+    right: -60%;
+    top: -100%;
+  }
+}
+.section-4 {
+  color: #ffffff;
+}
+.section-7 {
+  .fp-tableCell {
+    vertical-align: top;
+  }
+  .inner {
+    padding-top: 100px;
+  }
+}
+.item-feature{
+  text-align: center;
+  .feature-image {
+    margin-bottom: 40px;      
+    text-align: center;
+  }
+  .feature-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    
+    fallback: 1.2rem;
+  }
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+  from {background-position: 0;}
+  to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+z-index:0;
+}
+
+.twinkling{
+background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+z-index:1;
+
+-moz-animation:move-twink-back 200s linear infinite;
+-ms-animation:move-twink-back 200s linear infinite;
+-o-animation:move-twink-back 200s linear infinite;
+-webkit-animation:move-twink-back 200s linear infinite;
+animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+  z-index:3;
+
+-moz-animation:move-clouds-back 200s linear infinite;
+-ms-animation:move-clouds-back 200s linear infinite;
+-o-animation:move-clouds-back 200s linear infinite;
+-webkit-animation:move-clouds-back 200s linear infinite;
+animation:move-clouds-back 200s linear infinite;
 }

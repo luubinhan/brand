@@ -97,3 +97,5 @@ http://lmgonzalves.github.io/segment/
 http://martinpriotti.com/
 
 https://alvarotrigo.com/fullPage
+
+https://codemyui.com/sliding-diagonals-background-color-effect/
