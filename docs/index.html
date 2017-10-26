@@ -168,6 +168,9 @@
                 navigation: true,
                 afterLoad: toggleSectionIndex,
             });
+            $(document).on('click', '.enter', function() {
+                $.fn.fullpage.moveTo('linksectionComfort', 1);
+            });
         });
     </script>
 </head>
@@ -199,7 +202,26 @@
             <span class="icon-bar"></span>
           </button>
                             <a class="navbar-brand" href="index.html">
-                                <img src="images/logo.svg" alt="">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 68.2 86.9" enable-background="new 0 0 68.2 86.9" xml:space="preserve">
+                <g>
+                  <path fill="#4CBD99" d="M63.3,40c-0.5-0.8-1.2-1.5-2.1-2c-0.9-0.5-1.8-0.7-2.9-0.7c-0.9,0-1.8,0.2-2.6,0.6c-0.1,0-0.1,0.1-0.2,0.1
+                    c0,0,0,0-0.1,0c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0.1-0.2,0.2-0.3,0.2c-0.6,0.4-1.2,1-1.6,1.6c-0.5,0.8-0.8,1.7-0.8,2.7
+                    c0,1,0.3,1.8,0.8,2.6c0.5,0.8,1.2,1.5,2.1,1.9c0.9,0.5,1.8,0.7,2.8,0.7c0.2,0,0.3,0,0.4,0l-3.5,5.3h2.8l4.8-7.1
+                    c0.5-0.7,0.8-1.3,1-1.9c0.2-0.6,0.3-1.1,0.3-1.6C64,41.7,63.8,40.8,63.3,40z M61.2,44.3c-0.3,0.5-0.7,0.9-1.2,1.2
+                    c-0.5,0.3-1.1,0.5-1.7,0.5c-0.6,0-1.2-0.2-1.7-0.5c-0.5-0.3-0.9-0.7-1.2-1.2c-0.1-0.1-0.1-0.2-0.2-0.3c0,0,0,0,0,0
+                    c0.5,0.3,1.1,0.5,1.7,0.5c0.6,0,1.2-0.2,1.7-0.5c0.5-0.3,0.9-0.7,1.2-1.3c0.3-0.5,0.5-1.1,0.4-1.7c0-0.4-0.1-0.7-0.2-1.1
+                    c0.4,0.3,0.7,0.6,1,1c0.3,0.5,0.4,1.1,0.4,1.7C61.6,43.2,61.5,43.8,61.2,44.3z"/>
+                  <path fill="#4CBD99" d="M57.9,78.5c-2.1,2.1-5,3.4-9.3,3.4c-3.7,0-6.6-1-8.7-3c-2.1-2-4.1-5-6.1-9.2c-1.9-3.7-3.7-6.6-5.2-8.6
+                    c-1.6-2-3.7-3.6-6.3-4.7c4.7-0.9,8.9-2.7,12.5-5.4c3.6-2.6,6.3-5.8,8.2-9.6c1.9-3.7,2.9-7.6,2.9-11.5c0-4.7-1.3-9.1-3.8-13.4
+                    c-2.6-4.2-6.2-7.6-11-10.2c-4.7-2.6-10.1-3.8-16.2-3.8H3.9v81.6h2.8V57.2h8c3,0,5.6,0.6,7.6,1.9c2,1.2,3.7,2.8,5,4.7
+                    c1.3,1.9,2.7,4.4,4.1,7.5c1.5,3,2.9,5.3,4.1,7.1c1.3,1.8,3,3.2,5.1,4.4c2.1,1.1,4.7,1.7,7.9,1.7c3.2,0,5.8-0.6,7.9-1.7
+                    c0.5-0.2,0.9-0.5,1.4-0.9V78.5z M6.7,54.9V5.1h8c5.2,0,10,1.1,14.3,3.3c4.3,2.2,7.7,5.2,10.2,9c2.5,3.8,3.7,8,3.7,12.6
+                    c0,4.6-1.2,8.8-3.7,12.5c-2.5,3.8-5.9,6.8-10.2,9c-4.3,2.2-9.1,3.3-14.3,3.3H6.7z"/>
+                  <path fill="#4CBD99" d="M55.1,55.5V68c0,2.2-0.6,3.8-1.7,5c-1.2,1.2-2.7,1.8-4.7,1.8c-2,0-3.5-0.6-4.7-1.8c-1.2-1.2-1.7-2.9-1.7-5
+                    V55.7h-2.8V68c0,1.9,0.4,3.6,1.2,5.1c0.8,1.5,1.9,2.6,3.3,3.4l0,0c1.4,0.8,3,1.1,4.7,1.1c1.8,0,3.4-0.4,4.8-1.1
+                    c1.4-0.8,2.5-1.9,3.3-3.4c0.8-1.4,1.2-3.1,1.2-5.1V55.5C56.5,55.5,55.1,55.5,55.1,55.5z"/>
+                </g>
+                </svg>
                             </a>
                         </div>
 
@@ -258,7 +280,7 @@
                                         <strong>Ru9</strong> không phải chiếc nệm <del>êm nhất</del>, mà là nệm <strong>phù hợp nhất</strong> cho bạn giấc ngủ êm.
                                     </div>
                                     <div class="local-scroll">
-                                        <a href="" class="enter">Tại Sao ?</a>
+                                        <a href="#" class="enter">Tại Sao ?</a>
                                     </div>
                                 </div>
                             </div>
@@ -314,10 +336,7 @@
                                             </div>
                                             <div class="feature-desc">
                                                 <p>
-                                                    Loại fame đặc biệt được kết tạo bởi hàng triệu hạt graphite, giúp phân tán và hút nhiệt từ cơ thể đưa ra ngoài
-                                                </p>
-                                                <p>
-                                                    Cùng lớp hổ trợ giữ cho cơ thể trên bề mặt đệm và không bị lún sâu, tránh ra hiệu ứng lò sưởi từ thân nhiệt cơ thể.
+                                                    Độ bền được thực hiện bằng máy có sức nặng 150 kg, ép trên nệm 30000 lần, tương đương với việc sử dụng trong 10 năm.
                                                 </p>
                                             </div>
                                         </div>
@@ -332,7 +351,12 @@
                                                 <br> polyester
                                             </div>
                                             <div class="feature-desc">
-                                                Forget about swapping or switching midyear — the Casper duvet is designed for comfort in any season.
+                                                <p>
+                                                    Lớp vải phủ làm từ chất liệu tactel và polyester cao cấp, được chứng nhận không có phụ chất gây hại cho da, an toàn ngay cả với trẻ từ 0-3 tuổi.
+                                                </p>
+                                                <p>
+                                                    Khi tiếp xúc trực tiếp với cơ thể, lớp vải này giúp tối ưu quá trình đẩy nhiệt ra ngoài, đảm bảo độ thoáng tốt nhất.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -345,7 +369,12 @@
                                                 density
                                             </div>
                                             <div class="feature-desc">
-                                                Forget about swapping or switching midyear — the Casper duvet is designed for comfort in any season.
+                                                <p>
+                                                    Lớp hỗ trợ có chỉ số D (density) cao, để bạn linh hoạt trở mình khi ngủ mà không sợ bị lún sâu.
+                                                </p>
+                                                <p>
+                                                    Chỉ số D được Ru9 kiểm soát chặt chẽ ở mỗi lần sản xuất cho từng chiếc nệm được ép chặt, chắc chắn và đạt chất lượng tốt nhất.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -381,40 +410,35 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="item-feature">
-                                            <div class="feature-image">
-                                                <img src="https://casper.com/assets-spa/images/duvet-valueprop/1-down-science.svg" alt="">
-                                            </div>
                                             <div class="feature-title">
-                                                DOWN TO A SCIENCE
+                                                HEAT WICKING
                                             </div>
                                             <div class="feature-desc">
-                                                When it comes to insulation, duck down is the best temperature regulator out there. Plus, we love that it's humanely sourced.
+                                                <p>
+                                                    Heat is drawn into the mattress where gel and graphite work together to disperse heat outward and away from your body.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="item-feature">
-                                            <div class="feature-image">
-                                                <img src="https://casper.com/assets-spa/images/duvet-valueprop/2-light-right.svg" alt="">
-                                            </div>
+
                                             <div class="feature-title">
-                                                NICE AND LIGHT
+                                                BREATHABLE
                                             </div>
                                             <div class="feature-desc">
-                                                You’ll never feel weighed down because the breathable cotton cover is thirty percent lighter than others on the market.
+                                                With the help of our fabric, air flows through the foam cells to boost the speed of heat transfer through the mattress.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="item-feature">
-                                            <div class="feature-image">
-                                                <img src="https://casper.com/assets-spa/images/duvet-valueprop/3-never-out-season.svg" alt="">
-                                            </div>
+
                                             <div class="feature-title">
-                                                NEVER OUT OF SEASON
+                                                NO MORE QUICKSAND
                                             </div>
                                             <div class="feature-desc">
-                                                Forget about swapping or switching midyear — the Casper duvet is designed for comfort in any season.
+                                                Our support layer helps hold you closer to the surface to avoid the oven effect caused by sinking in too deeply.
                                             </div>
                                         </div>
                                     </div>
@@ -445,7 +469,7 @@
                                     <div class="col-sm-4">
                                         <div class="item-feature">
                                             <div class="feature-image">
-                                                <img src="https://casper.com/assets-spa/images/duvet-valueprop/1-down-science.svg" alt="">
+                                                <img src="images/icon-boxspring-0adf1479.png" alt="">
                                             </div>
                                             <div class="feature-desc">
                                                 Box Springs
@@ -455,7 +479,7 @@
                                     <div class="col-sm-4">
                                         <div class="item-feature">
                                             <div class="feature-image">
-                                                <img src="https://casper.com/assets-spa/images/duvet-valueprop/2-light-right.svg" alt="">
+                                                <img src="images/icon-slatted-80275080.png" alt="">
                                             </div>
                                             <div class="feature-desc">
                                                 Slatted Frames
@@ -465,7 +489,7 @@
                                     <div class="col-sm-4">
                                         <div class="item-feature">
                                             <div class="feature-image">
-                                                <img src="https://casper.com/assets-spa/images/duvet-valueprop/3-never-out-season.svg" alt="">
+                                                <img src="images/icon-adjustable-e99f800b.png" alt="">
                                             </div>
                                             <div class="feature-desc">
                                                 Adjustable Frames
@@ -475,7 +499,7 @@
                                 </div>
                                 <!-- row -->
                                 <div class="align-center">
-                                    <img src="https://www.tuftandneedle.com/images/shop/img_module_5-ce5e003c.jpg" alt="">
+                                    <img src="images/hinh2.jpg" alt="">
                                 </div>
                             </div>
                             <!-- section-body -->
@@ -503,42 +527,55 @@
                             <!-- section-header -->
                             <div class="section-body">
                                 <div class="row">
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                         <div class="item-feature">
                                             <div class="feature-image">
-                                                <img src="https://casper.com/assets-spa/images/duvet-valueprop/1-down-science.svg" alt="">
+                                                <div class="ms-icon icon_setup_1"></div>
                                             </div>
                                             <div class="feature-title">
-                                                DOWN TO A SCIENCE
+                                                Step 1
                                             </div>
                                             <div class="feature-desc">
-                                                When it comes to insulation, duck down is the best temperature regulator out there. Plus, we love that it's humanely sourced.
+                                                <p>Place the mattress roll at one end of the bed frame.</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                         <div class="item-feature">
                                             <div class="feature-image">
-                                                <img src="https://casper.com/assets-spa/images/duvet-valueprop/2-light-right.svg" alt="">
+                                                <div class="ms-icon icon_setup_2"></div>
                                             </div>
                                             <div class="feature-title">
-                                                NICE AND LIGHT
+                                                Step 2
                                             </div>
                                             <div class="feature-desc">
-                                                You’ll never feel weighed down because the breathable cotton cover is thirty percent lighter than others on the market.
+                                                Cut the first plastic layer and unroll onto the frame.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                         <div class="item-feature">
                                             <div class="feature-image">
-                                                <img src="https://casper.com/assets-spa/images/duvet-valueprop/3-never-out-season.svg" alt="">
+                                                <div class="ms-icon icon_setup_3"></div>
                                             </div>
                                             <div class="feature-title">
-                                                NEVER OUT OF SEASON
+                                                Step 3
                                             </div>
                                             <div class="feature-desc">
-                                                Forget about swapping or switching midyear — the Casper duvet is designed for comfort in any season.
+                                                Cut the second plastic layer (carefully).
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="item-feature">
+                                            <div class="feature-image">
+                                                <div class="ms-icon icon_setup_4"></div>
+                                            </div>
+                                            <div class="feature-title">
+                                                Step 4
+                                            </div>
+                                            <div class="feature-desc">
+                                                Watch your mattress expand! Goodnight!
                                             </div>
                                         </div>
                                     </div>
@@ -560,24 +597,38 @@
                     </div>
                     <div class="inner">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-sm-offset-6">
-                                    <div class="section-header">
-                                        <h2 class="title-section">
-                  Bad days happens.
-                  <br>
-                  Bad sleeps don't.
-                </h2>
-                                    </div>
-                                    <!-- section-header -->
-                                    <div class="section-body">
-                                        <div>
-                                            <row>
-
-                                            </row>
+                            <div class="p-20">
+                                <div class="row">
+                                    <div class="col-sm-offset-6">
+                                        <div class="section-header">
+                                            <h2 class="title-section">
+                      Bad days happens.
+                      <br>
+                      Bad sleeps don't.
+                    </h2>
                                         </div>
+                                        <!-- section-header -->
+                                        <div class="section-body">
+                                            <div>
+                                                <row>
+                                                    <div class="col-sm-3">
+                                                        <img src="images/car.svg" width="100" height='100' alt="">
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <div class="mb-20">
+                                                            <h2>Free shipping & return</h2>
+                                                            <p>Free shipping is included with every order. Returns are free, too. </p>
+                                                        </div>
+                                                        <div class="mb-20">
+                                                            <h2>risk-free trial</h2>
+                                                            <p>We’re confident you’ll love your Ru9, so we give you 100 nights to try it on us or we’ll pick it up and give you a full refund.</p>
+                                                        </div>
+                                                    </div>
+                                                </row>
+                                            </div>
+                                        </div>
+                                        <!-- section-body -->
                                     </div>
-                                    <!-- section-body -->
                                 </div>
                             </div>
                         </div>
@@ -645,7 +696,12 @@
 
                 <!-- ======= Customer Love ======= -->
                 <div id="customerLove" class="section section-home section-8">
+                    <!-- <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div> -->
                     <div class="inner">
+
+
                         <div class="container">
                             <div class="section-header">
                                 <h2 class="title-section">
@@ -671,6 +727,39 @@
                             <!-- section-body -->
                         </div>
                         <!-- container -->
+
+                        <div class="section-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8 col-xs-12">
+                                        <ul class="footer-nav">
+                                            <li><a href="">jobs</a></li>
+                                            <li><a href="">return</a></li>
+                                            <li><a href="">blog</a></li>
+                                            <li><a href="">contact us</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- col -->
+                                    <div class="col-sm-4 col-xs-12">
+                                        <div class="section-newsletter">
+                                            <div class="sn-title">
+                                                subscribe for newsletter
+                                            </div>
+                                            <!-- sn title -->
+                                            <form action="" class="form-inline subscribe-form">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control input-subscription" name="" placeholder="Địa chỉ email" id="">
+                                                </div>
+                                                <input class="btn btn-primary btn-subscribe" type="submit" value="Đăng ký">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- col -->
+                                </div>
+                                <!-- row -->
+                            </div>
+                            <!-- container -->
+                        </div>
                     </div>
                     <!-- inner -->
                 </div>

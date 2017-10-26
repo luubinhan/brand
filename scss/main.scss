@@ -610,6 +610,10 @@ table.normal tr td {
   }
 }
 /*let override default bootstrap style*/
+.form-control:focus {
+  box-shadow: none;
+  border-color: $secondary-color;
+}
 .nav-tabs {
   margin: 0 0 40px;
   border-bottom: 4px solid $border-color;
@@ -736,7 +740,7 @@ table.normal tr td {
    box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
    background: rgba(255,255,255,.07);
     .navbar-brand {
-      img {
+      svg {
         height: 37px;
         
       }
@@ -748,7 +752,7 @@ table.normal tr td {
   .navbar-brand{
     padding-top: 5px;
     padding-bottom: 5px;
-    img {
+    svg {
       height: 70px;
       @include transition(all 0.5s);
     }
@@ -758,6 +762,13 @@ table.normal tr td {
       > a {
         background: $secondary-color;
       }
+    }
+    .navbar-default .navbar-nav>li>a {
+      color: #fff;
+    }
+    .toolbar .cart-menu > a {
+      border-color: #fff;
+      color: #fff;
     }
   }
 }
@@ -1024,10 +1035,9 @@ table.normal tr td {
 .section-2 {  
   overflow: hidden;
   position: relative;
-  .col-sm-6 {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+  .col-sm-6:nth-child(2n+1) {
+    clear: left;
+  }  
   .inner {
     position: relative;
     z-index: 7;
@@ -1105,8 +1115,24 @@ table.normal tr td {
     position: relative;
     z-index: 2;
   }
+  .fp-tableCell {
+    vertical-align: bottom;
+  }
+  h2 {
+    font-weight: 700;
+  }
 }
 .section-7 {
+  border-left: 6px solid white;
+	border-top: 6px solid white;
+  border-bottom: 6px solid white;
+  background:
+  radial-gradient(#f8f8f8 15%, transparent 15%) 0 0,
+  radial-gradient(#f8f8f8 15%, transparent 15%) 16px 16px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 16px 17px;
+  background-size: 32px 32px;
+  background-color: #fff;
   .fp-tableCell {
     vertical-align: top;
   }
@@ -1114,20 +1140,22 @@ table.normal tr td {
     padding-top: 100px;
   }
 }
+.section-8 {  
+  position: relative;      
+}
 .item-feature{
   text-align: center;
   margin-bottom: 40px;
   .feature-image {
-    margin-bottom: 40px;      
+    margin-bottom: 7px;
     text-align: center;
     img {
-      height: 120px;
+      height: 80px;
     }
   }
   .feature-title {
     margin-bottom: 10px;
-    font-weight: 700;
-    
+    font-weight: 700;    
     fallback: 1.2rem;
   }
 }
@@ -1205,4 +1233,123 @@ z-index:0;
 -o-animation:move-clouds-back 200s linear infinite;
 -webkit-animation:move-clouds-back 200s linear infinite;
 animation:move-clouds-back 200s linear infinite;
+}
+.ms-icon {
+  background-image: url('../images/icons-4e68cd07.png');
+  background-repeat: no-repeat;
+}
+.icon_setup_1 {
+  width: 142px;
+  height: 133px;
+  background-position: -3708px -27px;
+  margin: 0 auto;
+}
+.icon_setup_2 {
+  width: 136px;
+  height: 119px;
+  background-position: -3850px -34px;
+  margin: 0 auto 14px;
+}
+.icon_setup_3 {
+  width: 178px;
+  height: 97px;
+  background-position: -3986px -45px;
+  margin: 0 auto 36px;
+}
+.icon_setup_4 {
+  width: 147px;
+  height: 128px;
+  background-position: -4164px -29px;
+  margin: 0 auto 5px;
+}
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #08d4a1 50%, #012d41 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position: absolute;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+/* SECTION NEWSLETTER
+-------------------------------------------------------------- */
+.section-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 29px 37px 29px;
+  background: $bg-gray;
+}
+.section-newsletter {
+  color: $red;
+  .sn-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .sn-desc {
+    color: $muted;
+  }
+  .subscribe-form {
+    font-size: 0;
+    .form-control {      
+      border-radius: 5px 0 0 5px;
+      height: 50px;
+      border: 3px solid $red;
+    }
+    .btn{
+      border-radius: 0 5px 5px 0;
+      height: 50px;
+      border: 3px solid $red;
+      background: $red;
+    }
+  }
+}
+@media(max-width: $breakpoint-sm){
+  .section-newsletter {
+    .sn-desc {
+      margin-bottom: $glutter;
+    }
+    .subscribe-form{
+      display: flex;
+      .form-group{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/* SECTION NEWSLETTER -------------------------------------------------------------- */
+
+.footer-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  li {
+    display: inline;
+    padding-right: 20px;
+    a {
+      color: #777;
+      font-family: $monospace;
+    }
+  }
 }
