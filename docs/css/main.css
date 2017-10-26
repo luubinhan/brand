@@ -725,11 +725,18 @@ table.normal tr td {
     padding: 10px 0;
     box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
     background: rgba(255, 255, 255, 0.07); }
+    #header[class^="loaded-section-"] .navbar-brand img {
+      height: 37px; }
   #header .navbar {
     margin-bottom: 0; }
   #header .navbar-brand {
     padding-top: 5px;
     padding-bottom: 5px; }
+    #header .navbar-brand img {
+      height: 70px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
   #header.loaded-section-3 .dat-hang > a {
     background: #08d4a1; }
 

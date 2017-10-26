@@ -735,6 +735,12 @@ table.normal tr td {
    padding: 10px 0;
    box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
    background: rgba(255,255,255,.07);
+    .navbar-brand {
+      img {
+        height: 37px;
+        
+      }
+    }
   }  
   .navbar {
     margin-bottom: 0;
@@ -742,6 +748,10 @@ table.normal tr td {
   .navbar-brand{
     padding-top: 5px;
     padding-bottom: 5px;
+    img {
+      height: 70px;
+      @include transition(all 0.5s);
+    }
   }
   &.loaded-section-3 {
     .dat-hang {
