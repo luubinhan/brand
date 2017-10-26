@@ -894,7 +894,7 @@ table.normal tr td {
   display: block;
   position: relative;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid #777;
   width: 50px;
   height: 50px;
   text-align: center; }
@@ -912,6 +912,8 @@ table.normal tr td {
     left: 11px;
     top: 9px;
     font-size: 2rem; }
+  .toolbar .cart-menu > a:hover {
+    background: #fff !important; }
 
 .toolbar .dat-hang > a {
   -webkit-transition: all 0.5s;

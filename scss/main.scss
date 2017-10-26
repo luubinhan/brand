@@ -899,14 +899,14 @@ table.normal tr td {
 }
 
 .toolbar {
-  .cart-menu {
+  .cart-menu {    
     > a {
       font-size: 0;
       text-indent: -9999em;
       display: block;
       position: relative;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.7);
+      border: 1px solid #777;
       width: 50px;
       height: 50px;
       text-align: center;
@@ -924,6 +924,9 @@ table.normal tr td {
         left: 11px;
         top: 9px;
         font-size: 2rem;        
+      }
+      &:hover{
+        background: #fff !important;
       }
     }
   }
