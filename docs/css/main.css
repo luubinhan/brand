@@ -685,6 +685,14 @@ table.normal tr td {
     padding-left: 30px; }
 
 /* RESET BOOTSTRAP -------------------------------------------- */
+.underline {
+  background-image: linear-gradient(120deg, #feae01 0%, #e81145 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  display: inline-block; }
+
 .home-hero {
   height: 100vh;
   background-position: center bottom;
@@ -741,11 +749,11 @@ table.normal tr td {
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s; }
-  #header.loaded-section-3 .dat-hang > a {
+  #header.loaded-section-3 .dat-hang > a, #header.loaded-section-4 .dat-hang > a {
     background: #08d4a1; }
-  #header.loaded-section-3 .navbar-default .navbar-nav > li > a {
+  #header.loaded-section-3 .navbar-default .navbar-nav > li > a, #header.loaded-section-4 .navbar-default .navbar-nav > li > a {
     color: #fff; }
-  #header.loaded-section-3 .toolbar .cart-menu > a {
+  #header.loaded-section-3 .toolbar .cart-menu > a, #header.loaded-section-4 .toolbar .cart-menu > a {
     border-color: #fff;
     color: #fff; }
 
@@ -891,12 +899,46 @@ table.normal tr td {
     color: #777;
     font-size: .7rem; }
 
+.section.active .section-header .title-section span:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 1000ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition-delay: 1000ms;
+  transition-delay: 1000ms; }
+
 .section .section-header {
   text-align: center;
   margin-bottom: 5rem; }
   .section .section-header .title-section {
     font-size: 3rem;
-    font-weight: 700; }
+    font-weight: 700;
+    margin-bottom: 15px; }
+    .section .section-header .title-section span {
+      display: inline-block;
+      position: relative; }
+      .section .section-header .title-section span:before {
+        background: -webkit-linear-gradient(left, #feae01, #e81145);
+        background: linear-gradient(90deg, #feae01, #e81145);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-transition: -webkit-transform 500ms ease-out;
+        transition: -webkit-transform 500ms ease-out;
+        transition: transform 500ms ease-out;
+        transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% + 1em);
+        top: 0.7em;
+        left: -0.5em;
+        height: 0.3em;
+        z-index: -1;
+        border-radius: 7px; }
     .section .section-header .title-section a {
       color: #012d41; }
   .section .section-header .title-section-details {
@@ -944,7 +986,24 @@ table.normal tr td {
   border-radius: 3rem; }
 
 .primary-menu > li > a {
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  position: relative; }
+  .primary-menu > li > a:after {
+    -webkit-transition: all 150ms cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 150ms cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 150ms cubic-bezier(0.77, 0, 0.175, 1);
+    content: "";
+    display: block;
+    width: 90%;
+    height: 3px;
+    position: absolute;
+    left: 5%;
+    bottom: 0px;
+    opacity: 0;
+    background: #08d4a1; }
+  .primary-menu > li > a:hover:after {
+    opacity: 1;
+    bottom: 5px; }
 
 /* COMPONENT: share-social-component
 -------------------------------------------------------------- */
@@ -967,7 +1026,8 @@ table.normal tr td {
     .widget_social .widget-body a {
       color: #000; }
 
-.fp-viewing-linksectionComfort .widget_social .widget-body a {
+.fp-viewing-linksectionCool .widget_social .widget-body a,
+.fp-viewing-linkSectionService .widget_social .widget-body a {
   color: #fff; }
 
 /* COMPONENT: share-social-component -------------------------------------------------------------- */
