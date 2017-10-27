@@ -53,6 +53,23 @@
     padding-top: 68px;
   }
 }
+@media (max-width: 1024px) and (orientation: portrait) {
+  #sectionHero.home-hero {
+    height: 60vw !important;
+    .fp-tableCell {
+      height: 60vw !important;
+    }
+  }
+  .fp-tableCell,
+  .fp-table {
+    height: auto !important;
+  }
+  .section {
+    .inner {
+      padding: 30px 0;
+    }
+  }
+}
 @media (max-width: 900px) {
   .footer {
     .footer-inner {
@@ -81,64 +98,33 @@
     }
   }
 }
-@media (max-width: $breakpoint-sm) {
-  .navbar-default .navbar-collapse {
-    background: $primary-color;
-    .primary-menu {
-      margin: 0;
-      > li {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        > a {
-          color: #fff;
-          &:after {
-            left: 0;
-            bottom: 0;
-            right: auto;
-            width: 0;
-            @include transition(0.5s all);
-          }
-          &:hover {
-            &:after {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
+
+@media (max-width: $breakpoint-sm) {  
+  .master-inner {
+    padding-bottom: 40px;
   }
   #header {
-    &[class^="loaded-section-"] {
-      .hidden-pc {
-        .toolbar {
-          top: 14px;
-          @include transition(all 0.5s);
-        }
-      }
-    }  
+    padding-top: 30px;
+    padding-bottom: 30px;
+  } 
+  
+  #sectionService {
+    padding-top: 250px;
+  }
+  .fp-tableCell,
+  .fp-table {
+    height: auto !important;
   }  
-  .hidden-pc {
-    display: block;
-    .toolbar {
-      position: fixed;
-      right: 70px;
-      top: 35px;
-      margin: 0;
-      width: 215px;
-      display: flex;
-      .cart-menu > a {
-        width: 40px;
-        height: 40px;
-        &:after {
-          left: 6px;
-          top: 4px;
-        }
+  .nav-tabs {
+    height: auto;
+    > li {
+      > a {
+        font-size: 16px;
       }
     }
-  }
-  #nav {
-    display: none;
-  }
+  }  
+}
+@media (max-width: 767px) {
   .footer .credit-txt {
     position: relative;
     top: auto;
@@ -182,16 +168,66 @@
       }
     }
   }
-  .master-inner {
-    padding-bottom: 40px;
-  }
-  #header {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
   .navbar-collapse {
     .toolbar {
       display: none;
+    }
+  }
+  #header {
+    &[class^="loaded-section-"] {
+      .hidden-pc {
+        .toolbar {
+          top: 14px;
+          @include transition(all 0.5s);
+        }
+      }
+    }  
+  }  
+  .hidden-pc {
+    display: block;
+    .toolbar {
+      position: fixed;
+      right: 70px;
+      top: 35px;
+      margin: 0;
+      width: 215px;
+      display: flex;
+      .cart-menu > a {
+        width: 40px;
+        height: 40px;
+        &:after {
+          left: 6px;
+          top: 4px;
+        }
+      }
+    }
+  }
+  #nav {
+    display: none;
+  }
+  .navbar-default .navbar-collapse {
+    background: $primary-color;
+    .primary-menu {
+      margin: 0;
+      > li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        > a {
+          color: #fff;
+          &:after {
+            left: 0;
+            bottom: 0;
+            right: auto;
+            width: 0;
+            @include transition(0.5s all);
+          }
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
     }
   }
   #sectionComfort {
@@ -212,32 +248,17 @@
       }
     }
   }
-  #sectionService {
-    padding-top: 250px;
-  }
-  .fp-tableCell,
-  .fp-table {
-    height: auto !important;
-  }
-  #sectionHero.fp-table {
-    height: 100vh !important;
-    .fp-tableCell{
-      height: 100vh !important;
-    }
-  }
-  .nav-tabs {
-    height: auto;
-    > li {
-      > a {
-        font-size: 16px;
-      }
-    }
-  }
-  .home-hero {
-    background-size: auto 100%;
-  }
 }
-
+@media (max-width: $breakpoint-xs) and (orientation: portrait) {
+  #sectionHero.home-hero {
+    height: 80vh !important;
+    background-size: auto 100%;
+    .fp-tableCell {
+      height: 80vh !important;
+    }
+  }  
+  
+}
 @media (max-width: $breakpoint-xs) {
   .section {
     .inner {
