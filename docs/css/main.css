@@ -960,6 +960,9 @@ table.normal tr td {
     margin-right: auto;
     font-size: 1.2rem; }
 
+.title-section a:hover {
+  text-decoration: none; }
+
 .toolbar .cart-menu > a {
   font-size: 0;
   text-indent: -9999em;
