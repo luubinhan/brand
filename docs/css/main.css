@@ -473,6 +473,9 @@ figure {
   max-height: 100%;
   display: inline; }
 
+.hidden-pc {
+  display: none; }
+
 .overhidden {
   overflow: hidden; }
 
@@ -630,6 +633,12 @@ table.normal tr td {
   box-shadow: none;
   border-color: #08d4a1; }
 
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:active,
+.nav-tabs > li.active > a:focus {
+  background: transparent; }
+
 .nav-tabs {
   margin: 0 0 40px;
   border-bottom: 4px solid #e1e3ea;
@@ -653,6 +662,7 @@ table.normal tr td {
       border: none;
       font-weight: bold;
       font-size: 1.2rem;
+      line-height: 27px;
       color: #363636; }
       .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
         background: transparent; }
@@ -707,6 +717,9 @@ table.normal tr td {
       line-height: 1;
       font-weight: 700;
       margin-bottom: 4rem; }
+      .home-hero .home-text .hero-title a:hover {
+        text-decoration: none;
+        color: #08d4a1; }
       .home-hero .home-text .hero-title div:nth-child(1) {
         font-weight: 200; }
       .home-hero .home-text .hero-title div:nth-child(2) {
@@ -891,7 +904,7 @@ table.normal tr td {
   .footer .copyright {
     float: left;
     width: 50%; }
-  .footer .credit {
+  .footer .credit-txt {
     position: fixed;
     left: 50px;
     bottom: 50px;
@@ -982,8 +995,12 @@ table.normal tr td {
   padding-left: 2rem;
   padding-right: 2rem;
   margin-left: 15px;
+  font-weight: 700;
   color: #ffffff !important;
+  font-family: "Nunito", arial, sans-serif;
   border-radius: 3rem; }
+  .toolbar .dat-hang > a:hover {
+    background: #08d4a1 !important; }
 
 .primary-menu > li > a {
   text-transform: lowercase;
@@ -1319,7 +1336,7 @@ table.normal tr td {
       border: 3px solid #e81145;
       background: #e81145; }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .section-newsletter .sn-desc {
     margin-bottom: 50px; }
   .section-newsletter .subscribe-form {

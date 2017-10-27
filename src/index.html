@@ -20,13 +20,16 @@
     }
 
     function handleLoadingSection(index, nextIndex, direction) {
-      $('#header').removeClass(function(index, className) {
-        return (className.match (/(^|\s)loading-section-\S+/g) || []).join(' ');  
-      });      
-      if (index !== 1) {
-        $('#header').addClass('loading-section-' + index);
+      //after leaving section 2
+      if(index == 2 && direction =='down'){
+        console.log("Going to section 3!");
       }
-    }    
+
+      else if(index == 2 && direction == 'up'){
+        console.log("Going to section 1!");
+      }
+    }
+
    
 		$(document).ready(function() {
       var DOMenter = document.querySelector('.enter');
@@ -98,7 +101,8 @@
         easingcss3: "cubic-bezier(0.77,0,0.175,1)",
         scrollingSpeed: 750,
         navigation: true,
-        afterLoad: toggleSectionIndex,
+        responsiveWidth: 1280,
+        afterLoad: toggleSectionIndex
       });
       $(document).on('click', '.enter', function(){
         $.fn.fullpage.moveTo('linksectionComfort', 1);
@@ -168,15 +172,13 @@
             </div><!-- section-header -->
             <div class="section-body">
               <div class="row">
-                <div class="col-sm-6">
+                <div class="col-md-3 col-sm-3 col-xs-6">
                   <div class="item-feature">
                     <div class="feature-image">
                        <img src="images/illus1.svg" alt="">
                     </div>
                     <div class="feature-title">
-                      Air
-                      <br>
-                      flow
+                      Air flow
                     </div>
                     <div class="feature-desc">
                       <p>
@@ -188,15 +190,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-3 col-sm-3 col-xs-6">
                   <div class="item-feature">
                     <div class="feature-image">
                       <img src="images/illus2.svg" alt="">
                     </div>
                     <div class="feature-title">
-                      durability
-                      <br>
-                      test
+                      durability test
                     </div>
                     <div class="feature-desc">
                       <p>
@@ -205,15 +205,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-3 col-sm-3 col-xs-6">
                   <div class="item-feature">
                     <div class="feature-image">
                         <img src="images/illus3.svg" alt="">
                     </div>
                     <div class="feature-title">
-                      tactel+
-                      <br>
-                      polyester
+                      tactel+ polyester
                     </div>
                     <div class="feature-desc">
                       <p>
@@ -225,7 +223,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="item-feature">
                       <div class="feature-image">
                           <img src="images/illus4.svg" alt="">
@@ -269,7 +267,7 @@
             </div><!-- section-header -->
             <div class="section-body">
               <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-xs-4">
                   <div class="item-feature">                   
                     <div class="feature-title">
                         HEAT WICKING
@@ -281,7 +279,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-xs-4">
                   <div class="item-feature">
                     
                     <div class="feature-title">
@@ -292,7 +290,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-xs-4">
                   <div class="item-feature">
                     
                     <div class="feature-title">
@@ -323,7 +321,7 @@
             </div><!-- section-header -->
             <div class="section-body">
               <div class="row mb-30">
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-xs-4">
                   <div class="item-feature">
                     <div class="feature-image">
                       <img src="images/icon-boxspring-0adf1479.png" alt="">
@@ -333,7 +331,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-xs-4">
                   <div class="item-feature">
                     <div class="feature-image">
                       <img src="images/icon-slatted-80275080.png" alt="">
@@ -343,7 +341,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-xs-4">
                   <div class="item-feature">
                     <div class="feature-image">
                       <img src="images/icon-adjustable-e99f800b.png" alt="">
@@ -374,12 +372,12 @@
                 </span>
               </h2>
               <div class="title-section-details">
-                  Đơn hàng sẽ được giao tới tận nhà của khách hàng, ngoại trừ các trường hợp hạn chế như khu vực văn phòng, chung cư cao tầng có quy định hạn chế ra vào, các khu cao tầng không có khu vực gửi xe. Trong các trường hợp hạn chế này, nếu khách hàng có nhu cầu giao tận nhà, vui lòng gọi tổng đài CSKH để được hỗ trợ. 
+                  Đơn hàng sẽ được giao tới tận nhà của khách hàng, ngoại trừ các trường hợp hạn chế như khu vực văn phòng, chung cư cao tầng có quy định hạn chế ra vào, các khu cao tầng không có khu vực gửi xe.
               </div>
             </div><!-- section-header -->
             <div class="section-body">
               <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-6">
                   <div class="item-feature">
                     <div class="feature-image">
                       <div class="ms-icon icon_setup_1"></div>
@@ -392,7 +390,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-6">
                   <div class="item-feature">
                     <div class="feature-image">
                         <div class="ms-icon icon_setup_2"></div>
@@ -405,7 +403,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-6">
                   <div class="item-feature">
                     <div class="feature-image">
                         <div class="ms-icon icon_setup_3"></div>
@@ -418,7 +416,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-6">
                     <div class="item-feature">
                       <div class="feature-image">
                           <div class="ms-icon icon_setup_4"></div>
@@ -457,10 +455,10 @@
                   <div class="section-body">
                     <div>
                       <row>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-xs-3">
                           <img src="images/car.svg" width="100" height='100' alt="">
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 col-xs-9">
                           <div class="mb-20">
                             <h2>Free shipping & return</h2>
                             <p>Free shipping is included with every order. Returns are free, too. </p>
@@ -544,16 +542,16 @@
             </div>
             <div class="section-body">
               <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-3 instagram-item">
                   <img src="https://www.tuftandneedle.com/images/mattress_reviews/img_instagram_1-c93b8736.jpg" alt="">
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-3 instagram-item">
                   <img src="https://www.tuftandneedle.com/images/mattress_reviews/img_instagram_2-a0c47428.jpg" alt="">
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-3 instagram-item">
                   <img src="https://www.tuftandneedle.com/images/mattress_reviews/img_instagram_3-13f21188.jpg" alt="">
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-3 instagram-item">
                   <img src="https://www.tuftandneedle.com/images/mattress_reviews/img_instagram_4-aefbd912.jpg" alt="">
                 </div>
               </div>
@@ -563,7 +561,7 @@
           <div class="section-footer">
               <div class="container">
                 <div class="row">
-                  <div class="col-sm-8 col-xs-12">
+                  <div class="col-sm-6 col-xs-12">
                     <ul class="footer-nav">
                       <li><a href="">jobs</a></li>
                       <li><a href="">return</a></li>
@@ -571,7 +569,7 @@
                       <li><a href="">contact us</a></li>
                     </ul>
                   </div> <!-- col -->
-                  <div class="col-sm-4 col-xs-12">
+                  <div class="col-sm-6 col-xs-12">
                     <div class="section-newsletter">
                       <div class="sn-title">
                         subscribe for newsletter                        

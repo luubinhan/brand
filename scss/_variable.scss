@@ -39,8 +39,9 @@ $sectionColor9: #e81145;
 # [Size]
 ----------------------------- */
 $glutter: 50px;
-$breakpoint-sm: 768px;
-$breakpoint-xs: 560px;
+$breakpoint-md: 1280px;
+$breakpoint-sm: 767px;
+$breakpoint-xs: 580px;
 $header-height: 70px;
 
 /*-----------------------------
@@ -50,5 +51,5 @@ $font-size-base: 14px;
 $font-size-large: 3rem;
 $font-size-small: 13px;
 $serif: "Nunito", arial, sans-serif;
-$san-serif: 'Montserrat Alternates', arial, sans-serif;
+$san-serif: 'Roboto', arial, sans-serif;
 $monospace: Inconsolata, monospace;

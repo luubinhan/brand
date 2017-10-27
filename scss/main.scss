@@ -420,11 +420,14 @@ figure {
   text-align: center;
   justify-content: center;
 }
-.figure3 img {
+.figure3 img {  
   width: auto;
   min-height: 0;
   max-height: 100%;
   display: inline;
+}
+.hidden-pc {
+  display: none;
 }
 .overhidden {
   overflow: hidden;
@@ -614,6 +617,12 @@ table.normal tr td {
   box-shadow: none;
   border-color: $secondary-color;
 }
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:active,
+.nav-tabs > li.active > a:focus {
+  background: transparent;
+}
 .nav-tabs {
   margin: 0 0 40px;
   border-bottom: 4px solid $border-color;
@@ -634,7 +643,7 @@ table.normal tr td {
         &:focus {
           border: none;
           border-bottom: 4px solid $primary-color;
-          color: $primary-text-color;
+          color: $primary-text-color;          
         }
       }      
     }
@@ -642,6 +651,7 @@ table.normal tr td {
       border: none;
       font-weight: bold;
       font-size: 1.2rem;
+      line-height: 27px;
       color: $primary-text-color;
       &:hover,
       &:focus{
@@ -708,9 +718,11 @@ table.normal tr td {
       line-height: 1;            
       font-weight: 700;
       margin-bottom: 4rem;
-      div {       
-        
-      
+      a:hover{
+        text-decoration: none;
+        color: $secondary-color;
+      }
+      div {
         &:nth-child(1) {
           font-weight: 200;          
         }
@@ -900,7 +912,7 @@ table.normal tr td {
     float: left;
     width: 50%;
   }
-  .credit {
+  .credit-txt {
     position: fixed;
     left: 50px;
     bottom: 50px;
@@ -1010,8 +1022,13 @@ table.normal tr td {
       padding-left: 2rem;
       padding-right: 2rem;
       margin-left: 15px;
+      font-weight: 700;
       color: #ffffff !important;
+      font-family: $serif;
       border-radius: 3rem;
+      &:hover {
+        background: $secondary-color !important;
+      }
     }
   }  
 }

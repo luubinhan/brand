@@ -17,7 +17,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700,800|Nunito:200,300,700&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Alternates:400,700,800|Nunito:200,300,700&amp;subset=vietnamese" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -90,6 +90,16 @@
 
                         </div>
                         <!-- /.navbar-collapse -->
+                        <div class="hidden-pc">
+                            <ul class="nav navbar-nav navbar-right toolbar">
+                                <li class="cart-menu">
+                                    <a href="">Cart</a>
+                                </li>
+                                <li class="dat-hang">
+                                    <a href="">ĐẶT HÀNG</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- /.container-fluid -->
                 </nav>
@@ -117,11 +127,31 @@
             <section class="footer-inner">
                 <div class="container">
                     <div class="copyright">
-                        Contact : <a href="tel:0943.870.301">0943.870.301</a> - Email: <a href="mailto:luubinhan1989@gmail.com">luubinhan1989@gmail.com</a>
+                        <ul class="footer-nav">
+                            <li><a href="">jobs</a></li>
+                            <li><a href="">return</a></li>
+                            <li><a href="">blog</a></li>
+                            <li><a href="">contact us</a></li>
+                        </ul>
                     </div>
                     <!-- copyright -->
+
                     <div class="credit">
-                        © 2017
+                        <div class="section-newsletter">
+                            <div class="sn-title">
+                                subscribe for newsletter
+                            </div>
+                            <!-- sn title -->
+                            <form action="" class="form-inline subscribe-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-subscription" name="" placeholder="Địa chỉ email" id="">
+                                </div>
+                                <input class="btn btn-primary btn-subscribe" type="submit" value="Đăng ký">
+                            </form>
+                        </div>
+                        <div class="credit-txt">
+                            © 2017
+                        </div>
                     </div>
                     <!-- credit -->
                 </div>
