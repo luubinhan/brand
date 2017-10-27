@@ -57,7 +57,7 @@
   .footer .subscribe-form {
     justify-content: center; } }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar-default .navbar-collapse {
     background: #012d41; }
     .navbar-default .navbar-collapse .primary-menu {

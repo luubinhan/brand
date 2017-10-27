@@ -1336,7 +1336,7 @@ table.normal tr td {
       border: 3px solid #e81145;
       background: #e81145; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .section-newsletter .sn-desc {
     margin-bottom: 50px; }
   .section-newsletter .subscribe-form {
