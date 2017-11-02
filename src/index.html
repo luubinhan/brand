@@ -83,11 +83,14 @@
       
 			$('#fullpage').fullpage({
         sectionsColor: ['#ffffff', '#f4f4f4', '#252525', '#feae01', '#f4f4f4', '#012d41'],
-        css3: true,
+        /* css3: true, */
         anchors: ['linkSectionHero', 'linksectionComfort', 'linksectionCool', 'linksectionCompatible', 'linkSectionShips', 'linkSectionService', 'linkSectionPricing', 'linkCustomerLove'],
         menu: '#nav',
-        easingcss3: "cubic-bezier(0.77,0,0.175,1)",
-        scrollingSpeed: 750,
+        /* easingcss3: "cubic-bezier(0.77,0,0.175,1)", */
+        /* scrollingSpeed: 750, */
+        fitToSection: false,
+        autoScrolling: false,
+        scrollBar: true,
         navigation: true,
         responsiveWidth: 1280,
         afterLoad: toggleSectionIndex
@@ -546,7 +549,7 @@
             </div><!-- section-body -->
           </div><!-- container -->
 
-          <div class="section-footer">
+          <!-- <div class="section-footer">
               <div class="container">
                 <div class="row">
                   <div class="col-sm-6 col-xs-12">
@@ -556,12 +559,12 @@
                       <li><a href="">blog</a></li>
                       <li><a href="">contact us</a></li>
                     </ul>
-                  </div> <!-- col -->
+                  </div> 
                   <div class="col-sm-6 col-xs-12">
                     <div class="section-newsletter">
                       <div class="sn-title">
                         subscribe for newsletter                        
-                      </div> <!-- sn title -->
+                      </div> 
                       <form action="" class="form-inline subscribe-form">
                         <div class="form-group">
                           <input type="text" class="form-control input-subscription" name="" placeholder="Địa chỉ email" id="">
@@ -569,10 +572,10 @@
                         <input class="btn btn-primary btn-subscribe" type="submit" value="Đăng ký">
                       </form>
                     </div>
-                  </div> <!-- col -->
-                </div> <!-- row -->	
-              </div><!-- container -->       
-          </div>  
+                  </div> 
+                </div>
+              </div>
+          </div>
         </div><!-- inner -->
       </div><!-- section -->
       <!-- ======= /Customer Love ======= -->    
