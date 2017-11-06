@@ -850,7 +850,9 @@ table.normal tr td {
       padding-top: 50px;
       position: relative;
       z-index: 2;
-      
+      small {
+        font-size: 50%;
+      }
     }
     .hero-desc {
       font-size: 18px;

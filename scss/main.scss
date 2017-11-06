@@ -718,6 +718,9 @@ table.normal tr td {
       line-height: 1;            
       font-weight: 700;
       margin-bottom: 4rem;
+      small {
+        font-size: 50%;
+      }
       a:hover{
         text-decoration: none;
         color: $secondary-color;

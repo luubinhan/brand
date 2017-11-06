@@ -717,6 +717,8 @@ table.normal tr td {
       line-height: 1;
       font-weight: 700;
       margin-bottom: 4rem; }
+      .home-hero .home-text .hero-title small {
+        font-size: 50%; }
       .home-hero .home-text .hero-title a:hover {
         text-decoration: none;
         color: #08d4a1; }
